@@ -206,7 +206,7 @@ const projects = [
   {
     name: "2D portfolio using React Bricks",
     description:
-      "A modern 2D portfolio using React CMS (React Bricks) with visual editing for NextJS, also using SASS for styling.",
+      "A modern 2D portfolio using React CMS (React Bricks) with visual editing for NextJS, also using SASS for styling. Besides presenting my portfolio, this project also helps me understand more about Content Management System.",
     tags: [
       {
         name: "View Demo",

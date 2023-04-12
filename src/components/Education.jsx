@@ -60,7 +60,7 @@ const Education = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          My Schools, Viết thêm ít mô tả
+          Let's take a look
         </motion.p>
       </div>
 

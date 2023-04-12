@@ -22,9 +22,6 @@ const Hero = () => {
             I'm a Front-end developer <br/>
             Welcome to my 3D Portfolio
           </p>
-          <p className={`${styles.heroSubSmallText} text-white-100 font-size-9`}>
-            (Rotate the computer)
-          </p>
         </div>
       </div>
 
