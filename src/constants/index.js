@@ -23,6 +23,10 @@ import {
   jobit,
   tripguide,
   threejs,
+  iu,
+  nbk,
+  cyber,
+  chawarong
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +46,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "JavaScript TypeScript",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Native",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "ReactJS NextJS ",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "VueJS NuxtJS",
     icon: creator,
   },
 ];
@@ -116,16 +120,15 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Fresher",
+    company_name: "CITYNOW",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Oct 2020 - Jan 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Cloning ZingMp3 Web application using ReactJS.",
+      "Learning NextJS.",
+      "Coding function in HR soloution under the guidance of mentor",
     ],
   },
   {
@@ -172,28 +175,12 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
+      "Tai Thanh Nguyen is a phenomenal developer. He handles responsibility well, and he is resourceful. I love working with him.",
+    name: "Chawarong Songserm",
+    designation: "QA/QC",
+    company: "Okkami",
+    image: chawarong,
+  }
 ];
 
 const projects = [
@@ -262,4 +249,31 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const schools = [
+  {
+    name: "Nguyen Binh Khiem High School for the gifted",
+    major: "📚 Major: Mathematics 📐📏📈",
+    time: "📅 Time: 2011 - 2014",
+    image: nbk,
+  },
+  {
+    name: "International University - VNU",
+    major: "📚 Major: Food Technology 🌾🌾🌾",
+    time: "📅 Time: 2014 - 2017",
+    image: iu,
+  },
+  {
+    name: "International University - VNU",
+    major: "📚 Major: Computer Science and Engineering 🧑‍💻🧑‍💻🧑‍💻",
+    time: "📅 Time: 2017 - 2021",
+    image: iu,
+  },
+  {
+    name: "CyberSoft Academy",
+    major: "📚 Major:  Front-end Development",
+    time: "📅 Time: 2021 - 2021",
+    image: cyber,
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects, schools };

@@ -29,6 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import iu from "./iu.png";
+import nbk from "./nbk.png";
+import cyber from "./cyber.png";
+import chawarong from "./chawarong.png";
 
 export {
   logo,
@@ -59,4 +63,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  iu,
+  nbk,
+  cyber,
+  chawarong,
 };
