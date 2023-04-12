@@ -10,23 +10,23 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  dicegame,
+  wordle,
+  twodportfolio,
   threejs,
+  vuejs,
+  bootstrap,
+  antd,
   iu,
   nbk,
   cyber,
-  chawarong
+  chawarong,
+  citynow,
+  facilitybot,
+  okkami
 } from "../assets";
 
 export const navLinks = [
@@ -93,12 +93,16 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Ant Design",
+    icon: antd,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "Vue JS",
+    icon: vuejs,
   },
   {
     name: "Three JS",
@@ -122,52 +126,38 @@ const experiences = [
   {
     title: "Fresher",
     company_name: "CITYNOW",
-    icon: starbucks,
+    icon: citynow,
     iconBg: "#383E56",
-    date: "Oct 2020 - Jan 2021",
+    date: "Oct 2021 - Jan 2022",
     points: [
       "Cloning ZingMp3 Web application using ReactJS.",
       "Learning NextJS.",
-      "Coding function in HR soloution under the guidance of mentor",
+      "Coding function in HR soloution under the guidance of mentor.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Front-end Web Developer",
+    company_name: "Facilitybot (Product of Robust Tech House)",
+    icon: facilitybot,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Feb 2022 - Jul 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implemented the search function by drawing an area on the map.",
+      "Created pages with table that con sort, filter. Also forms and handle validation.",
+      "Implemented drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features.",
+      "Handle responsive column.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Front-end Web Developer",
+    company_name: "Okkami (Outsourcing project of Robust Tech House)",
+    icon: okkami,
+    iconBg: "#383E56",
+    date: "Jul 2022 - Feb 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Base on the requirements, the mobile application, the designs in Fig ma, and \
+      AP! from the back-end team from Okkami, build the new fully responsive \
+      web application for them by using Next JS and CSS framework(Bootstrap 5).",
     ],
   },
 ];
@@ -185,67 +175,47 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Mini Dice Game",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "I build this mini game to consolidate knowledge using NextJS, Redux (Saga + Toolkit) to mange the statement, ESLint(airbnb) + Prettier + StyleLint + Lint-Staged + Husky for convention code, Bootstrap 5 + styled-component for styling, Next Cloudinary to optimize images and Docker and CI/CD in Github Actions.",
     tags: [
       {
-        name: "react",
+        name: "View Demo",
         color: "blue-text-gradient",
       },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: dicegame,
+    source_code_link: "https://github.com/taikool2121996/gamexucxac",
+    demo_link: "https://taikool2121996.github.io/gamexucxac",
   },
   {
-    name: "Job IT",
+    name: "Wordle Game",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years. I also use React Native Reanimated to handle animation.\
+      In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
+        name: "View Demo",
         color: "green-text-gradient",
       },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: wordle,
+    source_code_link: "https://github.com/taikool2121996/wordle",
+    demo_link: "https://expo.dev/@taikool2121996/Wordle?release-channel=default",
   },
   {
-    name: "Trip Guide",
+    name: "2D portfolio using React Bricks",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A modern 2D portfolio using React CMS (React Bricks) with visual editing for NextJS, also using SASS for styling.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "View Demo",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: twodportfolio,
+    source_code_link: "https://github.com/taikool2121996/my-portfolio",
+    demo_link: "https://stingray-app-ixjfv.ondigitalocean.app/",
   },
 ];
 
