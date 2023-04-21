@@ -34,6 +34,7 @@ import facilitybot from "./company/facilitybot.png";
 import okkami from "./company/okkami.png";
 
 // projects
+import gym from "./gym.png"
 import dicegame from "./dicegame.png"
 import wordle from "./wordle.png"
 import twodportfolio from "./twodportfolio.png"
@@ -65,6 +66,7 @@ export {
   vuejs,
   bootstrap,
   antd,
+  gym,
   dicegame,
   wordle,
   twodportfolio,

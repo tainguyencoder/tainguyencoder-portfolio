@@ -13,6 +13,7 @@ import {
   git,
   figma,
   docker,
+  gym,
   dicegame,
   wordle,
   twodportfolio,
@@ -104,18 +105,10 @@ const technologies = [
     name: 'Vue JS',
     icon: vuejs,
   },
-  // {
-  //   name: "Three JS",
-  //   icon: threejs,
-  // },
   {
     name: 'git',
     icon: git,
   },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
   {
     name: 'docker',
     icon: docker,
@@ -174,6 +167,22 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: 'Gym Exercises',
+    tech: 'ReactJS',
+    description:
+      'This fitness app offers a variety of options, including the ability to select particular muscle groups and exercise categories, browse over a thousand activities with detailed instructions, pagination, and associated YouTube videos, display similar workouts, and much more.\
+        Use RapidAPI to get data and TailwindCSS for styling.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: gym,
+    source_code_link: 'https://github.com/taikool2121996/gym-exercises',
+    demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
+  },
   {
     name: 'Mini Dice Game',
     tech: 'NextJS',
