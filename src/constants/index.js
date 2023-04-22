@@ -14,6 +14,7 @@ import {
   figma,
   docker,
   openai,
+  dashboard,
   gym,
   dicegame,
   wordle,
@@ -181,20 +182,20 @@ const projects = [
     demo_link: 'https://taithanhnguyen-articlesummarizer.netlify.app/',
   },
   {
-    name: 'Gym Exercises',
-    tech: 'ReactJS',
+    name: '2D Portfolio',
+    tech: 'React Bricks',
     description:
-      'This fitness app offers a variety of options, including the ability to select particular muscle groups and exercise categories, browse over a thousand activities with detailed instructions, pagination, and associated YouTube videos, display similar workouts, and much more.\
-        Use RapidAPI to get data and TailwindCSS for styling.',
+      'Besides this 3D portfolio was built with NextJS, I also built a modern 2D portfolio using CMS (React Bricks) with visual editing for NextJS, also using Tailwind CSS for styling.\
+      The goal of creating a 2D portfolio is to display my portfolio. Moreover, this project is teaching me more about content management systems.',
     tags: [
       {
         name: 'View Demo',
         color: 'pink-text-gradient',
       },
     ],
-    image: gym,
-    source_code_link: 'https://github.com/taikool2121996/gym-exercises',
-    demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
+    image: twodportfolio,
+    source_code_link: 'https://github.com/taikool2121996/my-portfolio',
+    demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
   },
   {
     name: 'Wordle Game',
@@ -214,6 +215,37 @@ const projects = [
     'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
   },
   {
+    name: 'Admin Dashboard',
+    tech: 'Syncfusion React',
+    description:
+      'Admin Dashboard includes one Dashboard, Three Pages, Four Apps, and Seven fully functional charts. Context API is used to manage statement and tailwindCSS for styling. The most important in this app is React Syncfusion - World Best UI Component Suite for Building Powerful Web, Desktop, and Mobile Apps.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: dashboard,
+    source_code_link: 'https://github.com/taikool2121996/admin-dashboard',
+    demo_link: 'https://taithanhnguyen-admin-dashboard.netlify.app/',
+  },
+  {
+    name: 'Gym Exercises',
+    tech: 'ReactJS',
+    description:
+      'This fitness app offers a variety of options, including the ability to select particular muscle groups and exercise categories, browse over a thousand activities with detailed instructions, pagination, and associated YouTube videos, display similar workouts, and much more.\
+        Use RapidAPI to get data and TailwindCSS for styling.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: gym,
+    source_code_link: 'https://github.com/taikool2121996/gym-exercises',
+    demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
+  },
+  {
     name: 'Mini Dice Game',
     tech: 'NextJS',
     description:
@@ -221,29 +253,13 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'blue-text-gradient',
+        color: 'green-text-gradient',
       },
     ],
     image: dicegame,
     source_code_link: 'https://github.com/taikool2121996/gamexucxac',
     demo_link: 'https://taikool2121996.github.io/gamexucxac',
-  },
-  {
-    name: '2D Portfolio',
-    tech: 'React Bricks',
-    description:
-      'Besides this 3D portfolio was built with NextJS, I also built a modern 2D portfolio using CMS (React Bricks) with visual editing for NextJS, also using Tailwind CSS for styling.\
-      The goal of creating a 2D portfolio is to display my portfolio. Moreover, this project is teaching me more about content management systems.',
-    tags: [
-      {
-        name: 'View Demo',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: twodportfolio,
-    source_code_link: 'https://github.com/taikool2121996/my-portfolio',
-    demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
-  },
+  }
 ];
 
 const schools = [
