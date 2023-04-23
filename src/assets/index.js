@@ -34,6 +34,7 @@ import facilitybot from './company/facilitybot.png';
 import okkami from './company/okkami.png';
 
 // projects
+import shirtai from './shirtai.png';
 import openai from './openai.png';
 import dashboard from './dashboard.png';
 import gym from './gym.png';
@@ -67,6 +68,7 @@ export {
   vuejs,
   bootstrap,
   antd,
+  shirtai,
   openai,
   dashboard,
   gym,

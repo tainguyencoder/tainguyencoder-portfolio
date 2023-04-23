@@ -13,6 +13,7 @@ import {
   git,
   figma,
   docker,
+  shirtai,
   openai,
   dashboard,
   gym,
@@ -166,6 +167,22 @@ const testimonials = [
 
 const projects = [
   {
+    name: 'AI-Powered 3D',
+    tech: 'ThreeJS',
+    description:
+      'Summarize your articles with OpenAI GPT-4 ? Why not ? This app is Article Summarizer - an open-source article summarizer that transforms lengthy articles into succinct summaries.\
+        Use Redux Toolkit to manage statement, local storage to save history, RapidAPI to get data and TailwindCSS for styling.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: shirtai,
+    source_code_link: 'https://github.com/taikool2121996/openai-dalle-tshirt',
+    demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
+  },
+  {
     name: 'OpenAI Summarizer',
     tech: 'ReactJS',
     description:
@@ -174,7 +191,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'blue-text-gradient',
+        color: 'pink-text-gradient',
       },
     ],
     image: openai,
@@ -190,29 +207,12 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'pink-text-gradient',
+        color: 'green-text-gradient',
       },
     ],
     image: twodportfolio,
     source_code_link: 'https://github.com/taikool2121996/my-portfolio',
     demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
-  },
-  {
-    name: 'Wordle Game',
-    tech: 'React Native',
-    description:
-    'A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years. I also use React Native Reanimated to handle animation.\
-    In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.',
-    tags: [
-      {
-        name: 'View Demo',
-        color: 'green-text-gradient',
-      },
-    ],
-    image: wordle,
-    source_code_link: 'https://github.com/taikool2121996/wordle',
-    demo_link:
-    'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
   },
   {
     name: 'Admin Dashboard',
@@ -246,6 +246,23 @@ const projects = [
     demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
   },
   {
+    name: 'Wordle Game',
+    tech: 'React Native',
+    description:
+    'A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years. I also use React Native Reanimated to handle animation.\
+    In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'green-text-gradient',
+      },
+    ],
+    image: wordle,
+    source_code_link: 'https://github.com/taikool2121996/wordle',
+    demo_link:
+    'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
+  },
+  {
     name: 'Mini Dice Game',
     tech: 'NextJS',
     description:
@@ -253,7 +270,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'green-text-gradient',
+        color: 'blue-text-gradient',
       },
     ],
     image: dicegame,
