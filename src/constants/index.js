@@ -15,6 +15,7 @@ import {
   docker,
   shirtai,
   openai,
+  chatgpt,
   dashboard,
   gym,
   dicegame,
@@ -68,29 +69,33 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-  },
+  // {
+  //   name: 'HTML 5',
+  //   icon: html,
+  // },
+  // {
+  //   name: 'CSS 3',
+  //   icon: css,
+  // },
+  // {
+  //   name: 'JavaScript',
+  //   icon: javascript,
+  // },
   {
     name: 'TypeScript',
     icon: typescript,
   },
+  // {
+  //   name: 'Redux Toolkit',
+  //   icon: redux,
+  // },
   {
     name: 'React JS',
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
+    name: 'Vue JS',
+    icon: vuejs,
   },
   {
     name: 'Ant Design',
@@ -100,14 +105,10 @@ const technologies = [
     name: 'Bootstrap',
     icon: bootstrap,
   },
-  {
-    name: 'Vue JS',
-    icon: vuejs,
-  },
-  {
-    name: 'git',
-    icon: git,
-  },
+  // {
+  //   name: 'git',
+  //   icon: git,
+  // },
   {
     name: 'docker',
     icon: docker,
@@ -179,8 +180,24 @@ const projects = [
       },
     ],
     image: shirtai,
-    source_code_link: 'https://github.com/taikool2121996/openai-dalle-tshirt',
+    source_code_link: 'https://github.dev/taikool2121996/openai-dalle-tshirt',
     demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
+  },
+  {
+    name: 'ChatGPT',
+    tech: 'JavaScript',
+    description:
+      'With a sophisticated user interface that is similar to the ChatGPT, communication with the text-davinci-003,\
+      and most significantly, the capability to ask the AI for assistance using any programming language and give it code that can be translated to another programming language.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: chatgpt,
+    source_code_link: 'https://github.dev/taikool2121996/openai-chat',
+    demo_link: 'https://taithanhnguyen-chatgpt.netlify.app/',
   },
   {
     name: 'OpenAI Summarizer',
@@ -191,28 +208,12 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: openai,
-    source_code_link: 'https://github.com/taikool2121996/openai_summizer',
-    demo_link: 'https://taithanhnguyen-articlesummarizer.netlify.app/',
-  },
-  {
-    name: '2D Portfolio',
-    tech: 'React Bricks',
-    description:
-      'Besides this 3D portfolio was built with NextJS, I also built a modern 2D portfolio using React Bricks with visual editing for NextJS, also using Tailwind CSS for styling.\
-      The goal of creating a 2D portfolio is to display my portfolio. Moreover, this project is teaching me more about content management systems.',
-    tags: [
-      {
-        name: 'View Demo',
         color: 'green-text-gradient',
       },
     ],
-    image: twodportfolio,
-    source_code_link: 'https://github.com/taikool2121996/my-portfolio',
-    demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
+    image: openai,
+    source_code_link: 'https://github.dev/taikool2121996/openai_summizer',
+    demo_link: 'https://taithanhnguyen-articlesummarizer.netlify.app/',
   },
   {
     name: 'Admin Dashboard',
@@ -226,8 +227,24 @@ const projects = [
       },
     ],
     image: dashboard,
-    source_code_link: 'https://github.com/taikool2121996/admin-dashboard',
+    source_code_link: 'https://github.dev/taikool2121996/admin-dashboard',
     demo_link: 'https://taithanhnguyen-admin-dashboard.netlify.app/',
+  },
+  {
+    name: '2D Portfolio',
+    tech: 'React Bricks',
+    description:
+      'Besides this 3D portfolio was built with NextJS, I also built a modern 2D portfolio using React Bricks with visual editing for NextJS, also using Tailwind CSS for styling.\
+      The goal of creating a 2D portfolio is to display my portfolio. Moreover, this project is teaching me more about content management systems.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: twodportfolio,
+    source_code_link: 'https://github.dev/taikool2121996/my-portfolio',
+    demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
   },
   {
     name: 'Gym Exercises',
@@ -237,7 +254,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'pink-text-gradient',
+        color: 'green-text-gradient',
       },
     ],
     image: gym,
@@ -253,7 +270,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'green-text-gradient',
+        color: 'blue-text-gradient',
       },
     ],
     image: wordle,
@@ -269,7 +286,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'blue-text-gradient',
+        color: 'pink-text-gradient',
       },
     ],
     image: dicegame,

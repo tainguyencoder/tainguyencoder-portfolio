@@ -35,6 +35,8 @@ import okkami from './company/okkami.png';
 
 // projects
 import shirtai from './shirtai.png';
+import chatgpt from './chatgpt.png';
+
 import openai from './openai.png';
 import dashboard from './dashboard.png';
 import gym from './gym.png';
@@ -69,6 +71,7 @@ export {
   bootstrap,
   antd,
   shirtai,
+  chatgpt,
   openai,
   dashboard,
   gym,
