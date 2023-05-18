@@ -244,7 +244,7 @@ const projects = [
     ],
     image: twodportfolio,
     source_code_link: 'https://github.dev/taikool2121996/my-portfolio',
-    demo_link: 'https://stingray-app-ixjfv.ondigitalocean.app/',
+    demo_link: 'https://resplendent-nasturtium-8a7d0a.netlify.app/',
   },
   {
     name: 'Gym Exercises',
