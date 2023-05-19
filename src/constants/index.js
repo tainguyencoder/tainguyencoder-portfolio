@@ -244,7 +244,7 @@ const projects = [
     ],
     image: twodportfolio,
     source_code_link: 'https://github.dev/taikool2121996/my-portfolio',
-    demo_link: 'https://resplendent-nasturtium-8a7d0a.netlify.app/',
+    demo_link: 'https://taithanhnguyen-2d-portfolio.netlify.app/',
   },
   {
     name: 'Gym Exercises',
@@ -258,7 +258,7 @@ const projects = [
       },
     ],
     image: gym,
-    source_code_link: 'https://github.com/taikool2121996/gym-exercises',
+    source_code_link: 'https://github.dev/taikool2121996/gym-exercises',
     demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
   },
   {
@@ -274,7 +274,7 @@ const projects = [
       },
     ],
     image: wordle,
-    source_code_link: 'https://github.com/taikool2121996/wordle',
+    source_code_link: 'https://github.dev/taikool2121996/wordle',
     demo_link:
     'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
   },
@@ -290,8 +290,8 @@ const projects = [
       },
     ],
     image: dicegame,
-    source_code_link: 'https://github.com/taikool2121996/gamexucxac',
-    demo_link: 'https://taikool2121996.github.io/gamexucxac',
+    source_code_link: 'https://github.dev/taikool2121996/gamexucxac',
+    demo_link: 'https://taithanhnguyen-dicegame.netlify.app/',
   }
 ];
 
