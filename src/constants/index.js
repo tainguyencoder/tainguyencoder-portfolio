@@ -16,6 +16,7 @@ import {
   shirtai,
   openai,
   chatgpt,
+  nft_cardgame,
   dashboard,
   gym,
   dicegame,
@@ -184,15 +185,31 @@ const projects = [
     demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
   },
   {
+    name: 'NFT Card Game',
+    tech: 'Web 3.0',
+    description:
+      'The Online Multiplayer Web 3 NFT Card Game that allows users to create thier characters, create and join live battles, choose their battleground, and battle other players in real-time!\
+        This application uses AvalancheJS for the transactions to the X-Chain, P-Chain, and C-Chain.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: nft_cardgame,
+    source_code_link: 'https://github.dev/taikool2121996/nft_card_game',
+    demo_link: 'https://taithanhnguyen-nft-cardgame.netlify.app/',
+  },
+  {
     name: 'ChatGPT',
-    tech: 'JavaScript',
+    tech: 'OpenAI',
     description:
       'With a sophisticated user interface that is similar to the ChatGPT, communication with the text-davinci-003,\
       and most significantly, the capability to ask the AI for assistance using any programming language and give it code that can be translated to another programming language.',
     tags: [
       {
         name: 'View Demo',
-        color: 'pink-text-gradient',
+        color: 'green-text-gradient',
       },
     ],
     image: chatgpt,
@@ -208,7 +225,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'green-text-gradient',
+        color: 'blue-text-gradient',
       },
     ],
     image: openai,
@@ -223,7 +240,7 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'blue-text-gradient',
+        color: 'pink-text-gradient',
       },
     ],
     image: dashboard,
@@ -239,12 +256,44 @@ const projects = [
     tags: [
       {
         name: 'View Demo',
-        color: 'pink-text-gradient',
+        color: 'green-text-gradient',
       },
     ],
     image: twodportfolio,
     source_code_link: 'https://github.dev/taikool2121996/my-portfolio',
     demo_link: 'https://taithanhnguyen-2d-portfolio.netlify.app/',
+  },
+  {
+    name: 'Mini Dice Game',
+    tech: 'NextJS',
+    description:
+      'I build this mini game to consolidate knowledge using NextJS, Redux (Saga + Toolkit) to mange the statement, ESLint(airbnb) + Prettier + StyleLint + Lint-Staged + Husky for convention code, Bootstrap 5 + styled-component for styling, Next Cloudinary to optimize images.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: dicegame,
+    source_code_link: 'https://github.dev/taikool2121996/gamexucxac',
+    demo_link: 'https://taithanhnguyen-dicegame.netlify.app/',
+  },
+  {
+    name: 'Wordle Game',
+    tech: 'React Native',
+    description:
+    'A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years.\
+    In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.',
+    tags: [
+      {
+        name: 'View Demo',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: wordle,
+    source_code_link: 'https://github.dev/taikool2121996/wordle',
+    demo_link:
+    'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
   },
   {
     name: 'Gym Exercises',
@@ -261,38 +310,6 @@ const projects = [
     source_code_link: 'https://github.dev/taikool2121996/gym-exercises',
     demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
   },
-  {
-    name: 'Wordle Game',
-    tech: 'React Native',
-    description:
-    'A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years.\
-    In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.',
-    tags: [
-      {
-        name: 'View Demo',
-        color: 'blue-text-gradient',
-      },
-    ],
-    image: wordle,
-    source_code_link: 'https://github.dev/taikool2121996/wordle',
-    demo_link:
-    'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
-  },
-  {
-    name: 'Mini Dice Game',
-    tech: 'NextJS',
-    description:
-      'I build this mini game to consolidate knowledge using NextJS, Redux (Saga + Toolkit) to mange the statement, ESLint(airbnb) + Prettier + StyleLint + Lint-Staged + Husky for convention code, Bootstrap 5 + styled-component for styling, Next Cloudinary to optimize images.',
-    tags: [
-      {
-        name: 'View Demo',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: dicegame,
-    source_code_link: 'https://github.dev/taikool2121996/gamexucxac',
-    demo_link: 'https://taithanhnguyen-dicegame.netlify.app/',
-  }
 ];
 
 const schools = [

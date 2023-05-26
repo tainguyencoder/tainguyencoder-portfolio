@@ -36,13 +36,13 @@ import okkami from './company/okkami.png';
 // projects
 import shirtai from './shirtai.png';
 import chatgpt from './chatgpt.png';
-
 import openai from './openai.png';
+import nft_cardgame from './nft_cardgame.png';
 import dashboard from './dashboard.png';
-import gym from './gym.png';
+import twodportfolio from './twodportfolio.png';
 import dicegame from './dicegame.png';
 import wordle from './wordle.png';
-import twodportfolio from './twodportfolio.png';
+import gym from './gym.png';
 
 // testimonials
 import chawarong from './chawarong.png';
@@ -73,6 +73,7 @@ export {
   shirtai,
   chatgpt,
   openai,
+  nft_cardgame,
   dashboard,
   gym,
   dicegame,
