@@ -122,7 +122,7 @@ const experiences = [
     company_name: 'CITYNOW',
     icon: citynow,
     iconBg: '#383E56',
-    date: 'Oct 2021 - Jan 2022',
+    date: 'Aug 2021 - Jan 2022',
     points: [
       'Cloning ZingMp3 Web application using ReactJS.',
       'Learning NextJS.',
@@ -134,7 +134,7 @@ const experiences = [
     company_name: 'Facilitybot (Product of Robust Tech House)',
     icon: facilitybot,
     iconBg: '#383E56',
-    date: 'Feb 2022 - Jul 2022',
+    date: 'Feb 2022 - Aug 2022',
     points: [
       'Implemented the search function by drawing an area on the map.',
       'Created pages with table that con sort, filter. Also forms and handle validation.',
@@ -147,7 +147,7 @@ const experiences = [
     company_name: 'Okkami (Outsourcing project of Robust Tech House)',
     icon: okkami,
     iconBg: '#383E56',
-    date: 'Jul 2022 - Feb 2023',
+    date: 'Aug 2022 - May 2023',
     points: [
       'Base on the requirements, the mobile application, the designs in Fig ma, and \
       AP! from the back-end team from Okkami, build the new fully responsive \

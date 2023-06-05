@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        🧑‍💻 I've been coding for 1+ years. I'm a junior Front-end developer who
+        🧑‍💻 I've been coding for 2 years. I'm a junior Front-end developer who
         loves building Web applications & learning new technologies. <br/>
         🐈 When I'm not coding, I'm proud father of 2 cats.
       </motion.p>
