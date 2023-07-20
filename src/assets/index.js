@@ -35,6 +35,7 @@ import okkami from './company/okkami.png';
 
 // projects
 import shirtai from './shirtai.png';
+import flexibble from './flexibble.png';
 import chatgpt from './chatgpt.png';
 import openai from './openai.png';
 import nft_cardgame from './nft_cardgame.png';
@@ -46,6 +47,7 @@ import gym from './gym.png';
 
 // testimonials
 import chawarong from './chawarong.png';
+import patrick from './patrick.png';
 
 export {
   logo,
@@ -71,6 +73,7 @@ export {
   bootstrap,
   antd,
   shirtai,
+  flexibble,
   chatgpt,
   openai,
   nft_cardgame,
@@ -83,6 +86,7 @@ export {
   nbk,
   cyber,
   chawarong,
+  patrick,
   citynow,
   facilitybot,
   okkami,
