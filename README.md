@@ -1,5 +1,5 @@
 # 3D Portfolio Website with Three.js and React.js
-![3D Portfolio](https://user-images.githubusercontent.com/72439970/231527447-7f648bf6-e135-47dc-8df5-54c5b455ce5c.png)
+![3D Portfolio](https://user-images.githubusercontent.com/72439970/255319693-152eb367-a3cc-4111-a934-3fe9275cb071.png)
 
 ## Introduction
 In this project, I used the following:
