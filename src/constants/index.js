@@ -228,7 +228,7 @@ const projects = [
     ],
     image: flexibble,
     source_code_link: 'https://github.dev/taikool2121996/grafbase_flexibble',
-    demo_link: 'https://grafbase-flexibble-amber.vercel.app/profile/user_01H5Q8ETQ67PGAMB2HENQJQMH1',
+    demo_link: 'https://grafbase-flexibble-j7ce5o39s-taikool2121996.vercel.app/profile/user_01H5Q8ETQ67PGAMB2HENQJQMH1',
   },
 
   // {
