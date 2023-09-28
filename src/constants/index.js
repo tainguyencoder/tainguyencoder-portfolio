@@ -120,30 +120,18 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Fresher + Front-end Developer',
-    company_name: 'CITYNOW',
-    icon: citynow,
-    iconBg: '#383E56',
-    date: 'Aug 2021 - Jan 2022',
-    points: [
-      'Cloning ZingMp3 Web application using ReactJS.',
-      'Learning NextJS.',
-      'Coding function in HR soloution under the guidance of mentor.',
-    ],
-  },
-  {
     title: 'Front-end Web Developer',
     company_name: 'Facilitybot (Product of Robust Tech House)',
     icon: facilitybot,
     iconBg: '#383E56',
-    date: 'Feb 2022 - Aug 2022',
+    date: 'Jan 2022 - Aug 2022',
     points: [
-      'Implement the search function by drawing an area on the map.',
-      'Create CRUD pages with table that con sort, filter. Also forms and handle validation.',
-      'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features.',
-      'Handle responsive column.',
-      'Use ChartJS to make a graph that show the statistics.',
-      'Create custom dashboard that help users can pin, arrange tables and statistical graphs.'
+      'Implement the search function by drawing an area on the map',
+      'Create CRUD pages with table that con sort, filter. Also forms and handle validation',
+      'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features',
+      'Handle responsive column',
+      'Use ChartJS to make a graph that show the statistics',
+      'Create custom dashboard that help users can pin, arrange tables and statistical graphs'
     ],
   },
   {
@@ -151,14 +139,14 @@ const experiences = [
     company_name: 'Okkami (Outsourcing project of Robust Tech House)',
     icon: okkami,
     iconBg: '#383E56',
-    date: 'Aug 2022 - May 2023',
+    date: 'Aug 2022 - Present',
     points: [
-      'Build the code base.',
-      'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub.',
-      'Code the UI/UX following the mobile app.',
-      'Handle responsive.',
-      'Write unit test and integration test using Jest & React Testing Library.',
-      'Deploy to Vercel for QA/QC from Okkami to test.',
+      'Build the code base',
+      'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub',
+      'Code the UI/UX following the mobile app',
+      'Handle responsive',
+      'Write unit test and integration test using Jest & React Testing Library',
+      'Deploy to Vercel for QA/QC from Okkami to test',
     ],
   },
 ];
