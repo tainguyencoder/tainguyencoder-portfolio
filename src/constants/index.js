@@ -154,7 +154,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'I have had the pleasure of working with Tai Thanh Nguyen on multiple projects, and I can confidently say that they are an exceptional talent in their field. Hí ability to consistently combined with their remarkable speed, sets them apart from the rest. They possess a deep understanding of front-end technologies, enabling them to navigate complex coding challenges with ease.',
+      'I have had the pleasure of working with Taikool on multiple projects, and I can confidently say that they are an exceptional talent in their field. Hí ability to consistently combined with their remarkable speed, sets them apart from the rest. They possess a deep understanding of front-end technologies, enabling them to navigate complex coding challenges with ease.',
     name: 'Patrick Sim',
     designation: 'Founder',
     company: 'Robust Tech House',
