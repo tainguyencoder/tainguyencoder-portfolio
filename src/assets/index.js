@@ -44,6 +44,7 @@ import twodportfolio from './twodportfolio.png';
 import dicegame from './dicegame.png';
 import wordle from './wordle.png';
 import gym from './gym.png';
+import homeland from './homeland.png';
 
 // testimonials
 import chawarong from './chawarong.png';
@@ -90,4 +91,5 @@ export {
   citynow,
   facilitybot,
   okkami,
+  homeland
 };

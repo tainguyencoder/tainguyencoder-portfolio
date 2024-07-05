@@ -35,6 +35,7 @@ import {
   citynow,
   facilitybot,
   okkami,
+  homeland
 } from '../assets';
 
 export const navLinks = [
@@ -101,8 +102,8 @@ const technologies = [
     icon: vuejs,
   },
   {
-    name: 'Ant Design',
-    icon: antd,
+    name: 'Three JS',
+    icon: threejs,
   },
   {
     name: 'Bootstrap',
@@ -131,7 +132,7 @@ const experiences = [
       'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features',
       'Handle responsive column',
       'Use ChartJS to make a graph that show the statistics',
-      'Create custom dashboard that help users can pin, arrange tables and statistical graphs'
+      'Create custom dashboard that help users can pin, arrange tables and statistical graphs',
     ],
   },
   {
@@ -167,25 +168,25 @@ const testimonials = [
     designation: 'QA/QC',
     company: 'Okkami',
     image: chawarong,
-  }
+  },
 ];
 
 const projects = [
   {
-    name: 'OpenAI-Powered 3D',
-    tech: 'ThreeJS + OpenAI',
+    name: 'Homeland',
+    tech: 'ThreeJS',
     description:
-      'Utilize brand-new 3D customizing tool to make your special and unique T-shirt. Imagination at full throttle and define your personal style.\
-        The best thing of this app is that generating images by using DALL-E - AI system that can create realistic images and art from a description in natural language.',
+    'Homeland is an innovative 3D web application designed to showcase my skills in 3D graphics and web development. Leveraging the power of ThreeJS and React Three Fiber, this project demonstrates my ability to create immersive and interactive experiences directly within a web browser.',
     tags: [
       {
         name: 'View Demo',
         color: 'blue-text-gradient',
       },
     ],
-    image: shirtai,
-    source_code_link: 'https://github.dev/taikool2121996/openai-dalle-tshirt',
-    demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
+    image: homeland,
+    source_code_link: 'https://github.dev/taikool2121996/3d-trial',
+    demo_link:
+      'https://taikool.cloud/',
   },
   {
     name: 'Web 3 NFT Card Game',
@@ -203,20 +204,22 @@ const projects = [
     source_code_link: 'https://github.dev/taikool2121996/nft_card_game',
     demo_link: 'https://taithanhnguyen-nft-cardgame.netlify.app/',
   },
-    {
-    name: 'Flexibble',
-    tech: 'Full Stack Next.js 13',
+
+  {
+    name: 'OpenAI-Powered 3D',
+    tech: 'ThreeJS + OpenAI',
     description:
-      'Flexibble stands at the forefront as the world leading community, empowering creatives from all walks of life to connect. Through its seamless integration of these technologies, It offers an unparalleled user experience, enabling creatives to effortlessly share their work and land their dream jobs.',
+      'Utilize brand-new 3D customizing tool to make your special and unique T-shirt. Imagination at full throttle and define your personal style.\
+        The best thing of this app is that generating images by using DALL-E - AI system that can create realistic images and art from a description in natural language.',
     tags: [
       {
         name: 'View Demo',
         color: 'green-text-gradient',
       },
     ],
-    image: flexibble,
-    source_code_link: 'https://github.dev/taikool2121996/grafbase_flexibble',
-    demo_link: 'https://grafbase-flexibble-j7ce5o39s-taikool2121996.vercel.app/profile/user_01H5Q8ETQ67PGAMB2HENQJQMH1',
+    image: shirtai,
+    source_code_link: 'https://github.dev/taikool2121996/openai-dalle-tshirt',
+    demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
   },
 
   // {
