@@ -155,7 +155,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'I have had the pleasure of working with Taikool on multiple projects, and I can confidently say that they are an exceptional talent in their field. Hí ability to consistently combined with their remarkable speed, sets them apart from the rest. They possess a deep understanding of front-end technologies, enabling them to navigate complex coding challenges with ease.',
+      'I have had the pleasure of working with Tai Nguyen on multiple projects, and I can confidently say that they are an exceptional talent in their field. Hí ability to consistently combined with their remarkable speed, sets them apart from the rest. They possess a deep understanding of front-end technologies, enabling them to navigate complex coding challenges with ease.',
     name: 'Patrick Sim',
     designation: 'Founder',
     company: 'Robust Tech House',
@@ -184,7 +184,7 @@ const projects = [
       },
     ],
     image: homeland,
-    source_code_link: 'https://github.dev/taikool2121996/3d-trial',
+    source_code_link: 'https://github.dev/tainguyencoder/3d-trial',
     demo_link:
       'https://taikool.cloud/',
   },
@@ -201,7 +201,7 @@ const projects = [
       },
     ],
     image: nft_cardgame,
-    source_code_link: 'https://github.dev/taikool2121996/nft_card_game',
+    source_code_link: 'https://github.dev/tainguyencoder/nft_card_game',
     demo_link: 'https://taithanhnguyen-nft-cardgame.netlify.app/',
   },
 
@@ -218,7 +218,7 @@ const projects = [
       },
     ],
     image: shirtai,
-    source_code_link: 'https://github.dev/taikool2121996/openai-dalle-tshirt',
+    source_code_link: 'https://github.dev/tainguyencoder/openai-dalle-tshirt',
     demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
   },
 
@@ -235,7 +235,7 @@ const projects = [
   //     },
   //   ],
   //   image: chatgpt,
-  //   source_code_link: 'https://github.dev/taikool2121996/openai-chat',
+  //   source_code_link: 'https://github.dev/tainguyencoder/openai-chat',
   //   demo_link: 'https://taithanhnguyen-chatgpt.netlify.app/',
   // },
   // {
@@ -251,7 +251,7 @@ const projects = [
   //     },
   //   ],
   //   image: openai,
-  //   source_code_link: 'https://github.dev/taikool2121996/openai_summizer',
+  //   source_code_link: 'https://github.dev/tainguyencoder/openai_summizer',
   //   demo_link: 'https://taithanhnguyen-articlesummarizer.netlify.app/',
   // },
   // {
@@ -266,7 +266,7 @@ const projects = [
   //     },
   //   ],
   //   image: dashboard,
-  //   source_code_link: 'https://github.dev/taikool2121996/admin-dashboard',
+  //   source_code_link: 'https://github.dev/tainguyencoder/admin-dashboard',
   //   demo_link: 'https://taithanhnguyen-admin-dashboard.netlify.app/',
   // },
   // {
@@ -282,7 +282,7 @@ const projects = [
   //     },
   //   ],
   //   image: twodportfolio,
-  //   source_code_link: 'https://github.dev/taikool2121996/my-portfolio',
+  //   source_code_link: 'https://github.dev/tainguyencoder/my-portfolio',
   //   demo_link: 'https://taithanhnguyen-2d-portfolio.netlify.app/',
   // },
   // {
@@ -297,7 +297,7 @@ const projects = [
   //     },
   //   ],
   //   image: dicegame,
-  //   source_code_link: 'https://github.dev/taikool2121996/gamexucxac',
+  //   source_code_link: 'https://github.dev/tainguyencoder/gamexucxac',
   //   demo_link: 'https://taithanhnguyen-dicegame.netlify.app/',
   // },
   // {
@@ -313,9 +313,9 @@ const projects = [
   //     },
   //   ],
   //   image: wordle,
-  //   source_code_link: 'https://github.dev/taikool2121996/wordle',
+  //   source_code_link: 'https://github.dev/tainguyencoder/wordle',
   //   demo_link:
-  //   'https://expo.dev/@taikool2121996/Wordle?release-channel=default',
+  //   'https://expo.dev/@tainguyencoder/Wordle?release-channel=default',
   // },
   // {
   //   name: 'Gym Exercises',
@@ -329,7 +329,7 @@ const projects = [
   //     },
   //   ],
   //   image: gym,
-  //   source_code_link: 'https://github.dev/taikool2121996/gym-exercises',
+  //   source_code_link: 'https://github.dev/tainguyencoder/gym-exercises',
   //   demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
   // },
 ];
