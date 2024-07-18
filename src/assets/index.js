@@ -30,10 +30,7 @@ import shirtai from './project/shirtai.png';
 import patrick from './testimonial/patrick.png';
 import chawarong from './testimonial/chawarong.png';
 
-import logo from './logo.svg';
 import github from './github.png';
-import menu from './menu.svg';
-import close from './close.svg';
 
 export {
   web,
@@ -56,10 +53,5 @@ export {
   okkami,
   patrick,
   chawarong,
-
   github,
-  menu,
-  close,
-
-  logo
 };
