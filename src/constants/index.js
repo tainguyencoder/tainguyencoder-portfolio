@@ -1,41 +1,24 @@
 import {
-  mobile,
+  web,
   backend,
   creator,
-  web,
+  mobile,
   javascript,
   typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  git,
-  figma,
-  docker,
-  shirtai,
-  openai,
-  flexibble,
-  chatgpt,
-  nft_cardgame,
-  dashboard,
-  gym,
-  dicegame,
-  wordle,
-  twodportfolio,
   threejs,
-  vuejs,
-  bootstrap,
-  antd,
-  iu,
+  reactjs,
+  tailwind,
+  docker,
   nbk,
+  iu,
   cyber,
-  chawarong,
-  patrick,
-  citynow,
+  homeland,
+  nft_cardgame,
+  shirtai,
   facilitybot,
   okkami,
-  homeland
+  chawarong,
+  patrick,
 } from '../assets';
 
 export const navLinks = [
@@ -55,43 +38,47 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'JavaScript TypeScript',
+    title1: 'JavaScript',
+    title2: 'TypeScript',
     icon: web,
   },
   {
-    title: 'React Native',
-    icon: mobile,
-  },
-  {
-    title: 'ReactJS NextJS ',
+    title1: 'ReactJS',
+    title2: 'NextJS',
     icon: backend,
   },
   {
-    title: 'VueJS NuxtJS',
+    title1: 'VueJS ',
+    title2: 'NuxtJS',
     icon: creator,
   },
+  {
+    title1: 'ThreeJS',
+    title2: 'R3F',
+    icon: mobile,
+  }
 ];
 
 const technologies = [
+  {
+    name: 'JavaScript',
+    icon: javascript,
+  },
   {
     name: 'TypeScript',
     icon: typescript,
   },
   {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Vue JS',
-    icon: vuejs,
-  },
-  {
-    name: 'Three JS',
+    name: 'ThreeJS',
     icon: threejs,
   },
   {
-    name: 'Bootstrap',
-    icon: bootstrap,
+    name: 'ReactJS',
+    icon: reactjs,
+  },
+  {
+    name: 'TailwindCSS',
+    icon: tailwind,
   },
   {
     name: 'docker',
@@ -120,7 +107,7 @@ const experiences = [
     company_name: 'Okkami (Outsourcing project of Robust Tech House)',
     icon: okkami,
     iconBg: '#383E56',
-    date: 'Aug 2022 - Present',
+    date: 'Sep 2022 - Present',
     points: [
       'Build the code base',
       'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub',
@@ -164,7 +151,7 @@ const projects = [
       },
     ],
     image: homeland,
-    source_code_link: 'https://github.dev/tainguyencoder/3d-trial',
+    source_code_link: 'https://github.com/tainguyencoder/homeland',
     demo_link:
       'https://taikool.cloud/',
   },
@@ -181,7 +168,7 @@ const projects = [
       },
     ],
     image: nft_cardgame,
-    source_code_link: 'https://github.dev/tainguyencoder/nft_card_game',
+    source_code_link: 'https://github.com/tainguyencoder/nft_card_game',
     demo_link: 'https://taithanhnguyen-nft-cardgame.netlify.app/',
   },
 
@@ -198,7 +185,7 @@ const projects = [
       },
     ],
     image: shirtai,
-    source_code_link: 'https://github.dev/tainguyencoder/openai-dalle-tshirt',
+    source_code_link: 'https://github.com/tainguyencoder/openai-dalle-tshirt',
     demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
   },
 ];

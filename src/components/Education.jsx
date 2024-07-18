@@ -64,7 +64,7 @@ const Education = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-row flex-wrap justify-center gap-9'>
+      <div className='mt-20 flex flex-row flex-wrap justify-center gap-7'>
         {schools.map((project, index) => (
           <SchoolCard key={`project-${index}`} index={index} {...project} />
         ))}

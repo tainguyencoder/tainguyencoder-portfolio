@@ -7,7 +7,7 @@ import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title1,title2, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -28,7 +28,9 @@ const ServiceCard = ({ index, title, icon }) => (
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
+          {title1}
+          <br />
+          {title2}
         </h3>
       </div>
     </motion.div>
@@ -54,7 +56,7 @@ const About = () => {
 
       <div className="mt-20 flex flex-row flex-wrap justify-center gap-10">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard key={service.icon} index={index} {...service} />
         ))}
       </div>
     </>
