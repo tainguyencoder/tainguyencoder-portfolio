@@ -43,10 +43,10 @@ const Navbar = () => {
           }}
         >
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Taikool &nbsp;
+            Tai &nbsp;
           </p>
         </Link>
-{/*
+
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
@@ -59,7 +59,7 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
-        </ul> */}
+        </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
