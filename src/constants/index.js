@@ -73,26 +73,10 @@ const services = [
 ];
 
 const technologies = [
-  // {
-  //   name: 'HTML 5',
-  //   icon: html,
-  // },
-  // {
-  //   name: 'CSS 3',
-  //   icon: css,
-  // },
-  // {
-  //   name: 'JavaScript',
-  //   icon: javascript,
-  // },
   {
     name: 'TypeScript',
     icon: typescript,
   },
-  // {
-  //   name: 'Redux Toolkit',
-  //   icon: redux,
-  // },
   {
     name: 'React JS',
     icon: reactjs,
@@ -109,10 +93,6 @@ const technologies = [
     name: 'Bootstrap',
     icon: bootstrap,
   },
-  // {
-  //   name: 'git',
-  //   icon: git,
-  // },
   {
     name: 'docker',
     icon: docker,
@@ -192,7 +172,7 @@ const projects = [
     name: 'Web 3 NFT Card Game',
     tech: 'ReactJS + Solidity',
     description:
-      'The Online Multiplayer Web 3 NFT Card Game that allows users to create thier characters, create and join live battles, choose their battleground, and battle other players in real-time!\
+      'The Online Multiplayer Web 3 NFT Card Game that allows users to create their characters, create and join live battles, choose their battleground, and battle other players in real-time!\
         This application uses AvalancheJS for the transactions to the X-Chain, P-Chain, and C-Chain.',
     tags: [
       {
@@ -221,117 +201,6 @@ const projects = [
     source_code_link: 'https://github.dev/tainguyencoder/openai-dalle-tshirt',
     demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
   },
-
-  // {
-  //   name: 'ChatGPT',
-  //   tech: 'OpenAI',
-  //   description:
-  //     'With a sophisticated user interface that is similar to the ChatGPT, communication with the text-davinci-003,\
-  //     and most significantly, the capability to ask the AI for assistance using any programming language and give it code that can be translated to another programming language.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'green-text-gradient',
-  //     },
-  //   ],
-  //   image: chatgpt,
-  //   source_code_link: 'https://github.dev/tainguyencoder/openai-chat',
-  //   demo_link: 'https://taithanhnguyen-chatgpt.netlify.app/',
-  // },
-  // {
-  //   name: 'OpenAI Summarizer',
-  //   tech: 'ReactJS',
-  //   description:
-  //     'Summarize your articles with OpenAI GPT-4 ? This app is Article Summarizer - an open-source article summarizer that transforms lengthy articles into succinct summaries.\
-  //       Using Redux Toolkit to manage statement, local storage to save history, RapidAPI to get data and TailwindCSS for styling.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'blue-text-gradient',
-  //     },
-  //   ],
-  //   image: openai,
-  //   source_code_link: 'https://github.dev/tainguyencoder/openai_summizer',
-  //   demo_link: 'https://taithanhnguyen-articlesummarizer.netlify.app/',
-  // },
-  // {
-  //   name: 'Admin Dashboard',
-  //   tech: 'Syncfusion React',
-  //   description:
-  //     'Admin Dashboard includes one Dashboard, Three Pages, Four Apps, and Seven fully functional charts. Context API is used to manage statement. The most important in this app is React Syncfusion - World Best UI Component Suite for Building Powerful Web, Desktop, and Mobile Apps.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'pink-text-gradient',
-  //     },
-  //   ],
-  //   image: dashboard,
-  //   source_code_link: 'https://github.dev/tainguyencoder/admin-dashboard',
-  //   demo_link: 'https://taithanhnguyen-admin-dashboard.netlify.app/',
-  // },
-  // {
-  //   name: '2D Portfolio',
-  //   tech: 'React Bricks',
-  //   description:
-  //     'Besides this 3D portfolio was built with NextJS, I also built a modern 2D portfolio using React Bricks with visual editing for NextJS, also using Tailwind CSS for styling.\
-  //     The goal of creating a 2D portfolio is to display my portfolio. Moreover, this project is teaching me more about content management systems.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'green-text-gradient',
-  //     },
-  //   ],
-  //   image: twodportfolio,
-  //   source_code_link: 'https://github.dev/tainguyencoder/my-portfolio',
-  //   demo_link: 'https://taithanhnguyen-2d-portfolio.netlify.app/',
-  // },
-  // {
-  //   name: 'Mini Dice Game',
-  //   tech: 'NextJS',
-  //   description:
-  //     'I build this mini game to consolidate knowledge using NextJS, Redux (Saga + Toolkit) to mange the statement, ESLint(airbnb) + Prettier + StyleLint + Lint-Staged + Husky for convention code, Bootstrap 5 + styled-component for styling, Next Cloudinary to optimize images.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'blue-text-gradient',
-  //     },
-  //   ],
-  //   image: dicegame,
-  //   source_code_link: 'https://github.dev/tainguyencoder/gamexucxac',
-  //   demo_link: 'https://taithanhnguyen-dicegame.netlify.app/',
-  // },
-  // {
-  //   name: 'Wordle Game',
-  //   tech: 'React Native',
-  //   description:
-  //   'A Wordle Clone Game built on React Native using JavaScript. In this app, I used AsyncStorage from Expo to manage the game state for different days and years.\
-  //   In oder to play this demo, you need to download and install EXPO GO, then scan the QR code.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'pink-text-gradient',
-  //     },
-  //   ],
-  //   image: wordle,
-  //   source_code_link: 'https://github.dev/tainguyencoder/wordle',
-  //   demo_link:
-  //   'https://expo.dev/@tainguyencoder/Wordle?release-channel=default',
-  // },
-  // {
-  //   name: 'Gym Exercises',
-  //   tech: 'ReactJS',
-  //   description:
-  //     'This fitness app offers a variety of options, including the ability to select particular muscle groups and exercise categories, browse over a thousand activities with detailed instructions, pagination, and associated YouTube videos, display similar workouts, and much more.',
-  //   tags: [
-  //     {
-  //       name: 'View Demo',
-  //       color: 'green-text-gradient',
-  //     },
-  //   ],
-  //   image: gym,
-  //   source_code_link: 'https://github.dev/tainguyencoder/gym-exercises',
-  //   demo_link: 'https://taithanhnguyen-gym-exercises.netlify.app/',
-  // },
 ];
 
 const schools = [
