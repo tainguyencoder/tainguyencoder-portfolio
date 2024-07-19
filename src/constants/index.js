@@ -169,7 +169,7 @@ const projects = [
     ],
     image: nft_cardgame,
     source_code_link: 'https://github.com/tainguyencoder/nft_card_game',
-    demo_link: 'https://taithanhnguyen-nft-cardgame.netlify.app/',
+    demo_link: 'https://tainguyencoder-nft-cardgame.netlify.app/',
   },
 
   {
