@@ -186,7 +186,7 @@ const projects = [
     ],
     image: shirtai,
     source_code_link: 'https://github.com/tainguyencoder/openai-dalle-tshirt',
-    demo_link: 'https://taithanhnguyen-openai-dalle.netlify.app/',
+    demo_link: 'https://tainguyencoder-openai-dalle.netlify.app/',
   },
 ];
 
