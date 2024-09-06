@@ -8,11 +8,64 @@ import { Suspense } from 'react';
 import { SpiderMan } from '../models';
 import { Loader } from '../components';
 
+// Hook to manage flickering effect
+const useFlicker = (baseIntensity, interval = 100) => {
+  const [intensity, setIntensity] = useState(baseIntensity);
+
+  useEffect(() => {
+    const flickerInterval = setInterval(() => {
+      setIntensity(baseIntensity * (1 + Math.random() * 2.5)); // Adjust the range as needed
+    }, interval);
+
+    return () => clearInterval(flickerInterval);
+  }, [baseIntensity, interval]);
+
+  return intensity;
+};
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState(' ');
+  const [lightsOn, setLightsOn] = useState(false);
+  const [intensities, setIntensities] = useState({
+    directional: 0,
+    point1: 0,
+    point2: 0,
+    spot: 0,
+    point3: 0
+  });
+
+  useEffect(() => {
+    // Gradual brightening effect
+    if (!lightsOn) {
+      const startTime = Date.now();
+      const duration = 3500; // 2.5 seconds
+
+      const interval = setInterval(() => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 2);
+        setIntensities({
+          directional: progress * 1,
+          point1: progress * 1,
+          point2: progress * 1,
+          spot: progress * 1,
+          point3: progress * 0.5
+        });
+
+        if (progress === 1) {
+          setLightsOn(true);
+          clearInterval(interval);
+        }
+      }, 16); // ~60fps
+    }
+  }, [lightsOn]);
+
+  // Apply flicker effect only to one side of the lights
+  const pointLightIntensity1 = useFlicker(intensities.point1);
+  const pointLightIntensity2 = useFlicker(intensities.point2);
+  const pointLightIntensity3 = intensities.point3;
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -145,17 +198,17 @@ const Contact = () => {
             far: 1000,
           }}
         >
-          <directionalLight position={[-5, 5, 5]} intensity={0.5} />
+          <directionalLight position={[-5, 5, 5]} intensity={intensities.directional} />
           <ambientLight intensity={0.5} />
-          <pointLight position={[5, 10, 5]} intensity={0.5} />
-          <pointLight position={[-5, 10, -5]} intensity={0.5} />
-          <spotLight
+          <pointLight position={[5, 10, 5]} intensity={pointLightIntensity1} />
+          <pointLight position={[-5, 10, -5]} intensity={pointLightIntensity2} />
+          {/* <spotLight
             position={[10, 10, 10]}
             angle={0.2}
             penumbra={0.5}
-            intensity={0.5}
-          />
-          <pointLight position={[5, -5, 5]} intensity={0.5} castShadow />
+            intensity={intensities.spot}
+          /> */}
+          <pointLight position={[5, -5, 5]} intensity={pointLightIntensity3} castShadow />
           <Suspense fallback={<Loader />}>
             <SpiderMan
               currentAnimation={currentAnimation}
