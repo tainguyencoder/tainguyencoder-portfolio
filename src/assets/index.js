@@ -1,8 +1,8 @@
 // about
-import backend from './about/backend.png';
-import creator from './about/creator.png';
-import mobile from './about/mobile.png';
-import web from './about/web.png';
+import backend from './about/backend.webp';
+import creator from './about/creator.webp';
+import mobile from './about/mobile.webp';
+import web from './about/web.webp';
 
 // tech
 import javascript from './tech/javascript.png';
@@ -13,24 +13,20 @@ import tailwind from './tech/tailwind.png';
 import docker from './tech/docker.png';
 
 // education
-import nbk from './education/nbk.png';
-import iu from './education/iu.png';
-import cyber from './education/cyber.png';
+import nbk from './education/nbk.webp';
+import iu from './education/iu.webp';
+import cyber from './education/cyber.webp';
 
 // experience
-import facilitybot from './company/facilitybot.png';
-import okkami from './company/okkami.png';
+import facilitybot from './company/facilitybot.webp';
+import okkami from './company/okkami.webp';
 
 // projects
-import homeland from './project/homeland.png';
-import nft_cardgame from './project/nft_cardgame.png';
-import shirtai from './project/shirtai.png';
+import homeland from './project/homeland.webp';
+import nft_cardgame from './project/nft_cardgame.webp';
+import shirtai from './project/shirtai.webp';
 
-// testimonials
-import patrick from './testimonial/patrick.png';
-import chawarong from './testimonial/chawarong.png';
-
-import github from './github.png';
+import github from './github.webp';
 
 export {
   web,
@@ -51,7 +47,5 @@ export {
   shirtai,
   facilitybot,
   okkami,
-  patrick,
-  chawarong,
   github,
 };

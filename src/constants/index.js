@@ -17,8 +17,6 @@ import {
   shirtai,
   facilitybot,
   okkami,
-  chawarong,
-  patrick,
 } from '../assets';
 
 export const navLinks = [
@@ -119,25 +117,6 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      'I have had the pleasure of working with Tai Nguyen on multiple projects, and I can confidently say that they are an exceptional talent in their field. Hí ability to consistently combined with their remarkable speed, sets them apart from the rest. They possess a deep understanding of front-end technologies, enabling them to navigate complex coding challenges with ease.',
-    name: 'Patrick Sim',
-    designation: 'Founder',
-    company: 'Robust Tech House',
-    image: patrick,
-  },
-  {
-    testimonial:
-      'Tai is a phenomenal developer. He has an innate knack for understanding project requirements and translating them into visually stunning and highly functional websites. It is a pleasure to collaborate with Tai and I highly recommend him to anyone seeking a top-notch front-end web developer who consistently delivers exceptional results.',
-    name: 'Chawarong Songserm',
-    designation: 'QA/QC',
-    company: 'Okkami',
-    image: chawarong,
-  },
-];
-
 const projects = [
   {
     name: 'Homeland',
@@ -211,4 +190,4 @@ const schools = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, schools };
+export { services, technologies, experiences, projects, schools };
