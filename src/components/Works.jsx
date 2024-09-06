@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt"; // Replaced react-tilt with react-parallax-tilt
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -21,18 +21,17 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        tiltMaxAngleX={45}  // Replace options with tiltMaxAngleX and tiltMaxAngleY
+        tiltMaxAngleY={45}
+        scale={1.05}         // Same scaling behavior
+        transitionSpeed={450} // Similar speed setting
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
             alt='project_image'
-            className='w-full h-full object-fit rounded-2xl'
+            className='w-full h-full object-cover rounded-2xl'
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -61,7 +60,7 @@ const ProjectCard = ({
               key={`${name}-${tag.name}`}
               className={`text-[14px] ${tag.color}`}
               onClick={() => window.open(demo_link, "_blank")}
-              style={{cursor: 'pointer'}}
+              style={{ cursor: 'pointer' }}
             >
               {tag.name}
             </p>
@@ -85,7 +84,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
+          Following projects showcase my skills and experience through
           examples of my work. Each project is described with Github
           links to code repositories. It reflects my ability to solve problems
           and work with different technologies.

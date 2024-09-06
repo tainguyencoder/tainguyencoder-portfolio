@@ -1,16 +1,13 @@
 // about
-import backend from './about/backend.webp';
-import creator from './about/creator.webp';
-import mobile from './about/mobile.webp';
-import web from './about/web.webp';
+import typescript from './about/typescript.webp';
+import react from './about/react.webp';
+import vue from './about/vue.webp';
+import tailwindcss from './about/tailwindcss.webp';
 
 // tech
-import javascript from './tech/javascript.png';
-import typescript from './tech/typescript.png';
-import threejs from './tech/threejs.svg';
-import reactjs from './tech/reactjs.png';
-import tailwind from './tech/tailwind.png';
-import docker from './tech/docker.png';
+import threejs from './tech/threejs.webp';
+import git from './tech/git.webp';
+import nextjs from './tech/nextjs.webp';
 
 // education
 import nbk from './education/nbk.webp';
@@ -26,19 +23,17 @@ import homeland from './project/homeland.webp';
 import nft_cardgame from './project/nft_cardgame.webp';
 import shirtai from './project/shirtai.webp';
 
+// others
 import github from './github.webp';
 
 export {
-  web,
-  backend,
-  creator,
-  mobile,
-  javascript,
   typescript,
+  vue,
+  react,
+  tailwindcss,
   threejs,
-  reactjs,
-  tailwind,
-  docker,
+  git,
+  nextjs,
   nbk,
   iu,
   cyber,

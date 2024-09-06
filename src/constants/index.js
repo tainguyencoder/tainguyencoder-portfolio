@@ -1,14 +1,11 @@
 import {
-  web,
-  backend,
-  creator,
-  mobile,
-  javascript,
   typescript,
+  react,
+  vue,
+  tailwindcss,
+  git,
   threejs,
-  reactjs,
-  tailwind,
-  docker,
+  nextjs,
   nbk,
   iu,
   cyber,
@@ -36,51 +33,35 @@ export const navLinks = [
 
 const services = [
   {
-    title1: 'JavaScript',
-    title2: 'TypeScript',
-    icon: web,
+    title: 'TypeScript',
+    icon: typescript,
   },
   {
-    title1: 'ReactJS',
-    title2: 'NextJS',
-    icon: backend,
+    title: 'React',
+    icon: react,
   },
   {
-    title1: 'VueJS ',
-    title2: 'NuxtJS',
-    icon: creator,
+    title: 'VueJS ',
+    icon: vue,
   },
   {
-    title1: 'ThreeJS',
-    title2: 'R3F',
-    icon: mobile,
-  }
+    title: 'TailwindCSS',
+    icon: tailwindcss,
+  },
 ];
 
 const technologies = [
   {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
+    name: 'Git',
+    icon: git,
   },
   {
     name: 'ThreeJS',
     icon: threejs,
   },
   {
-    name: 'ReactJS',
-    icon: reactjs,
-  },
-  {
-    name: 'TailwindCSS',
-    icon: tailwind,
-  },
-  {
-    name: 'docker',
-    icon: docker,
+    name: 'NextJS',
+    icon: nextjs,
   },
 ];
 
@@ -122,7 +103,7 @@ const projects = [
     name: 'Homeland',
     tech: 'ThreeJS',
     description:
-    'Homeland is an innovative 3D web application designed to showcase my skills in 3D graphics and web development. Leveraging the power of ThreeJS and React Three Fiber, this project demonstrates my ability to create immersive and interactive experiences directly within a web browser.',
+      'Homeland is an innovative 3D web application designed to showcase my skills in 3D graphics and web development. Leveraging the power of ThreeJS and React Three Fiber, this project demonstrates my ability to create immersive and interactive experiences directly within a web browser.',
     tags: [
       {
         name: 'View Demo',
@@ -131,8 +112,7 @@ const projects = [
     ],
     image: homeland,
     source_code_link: 'https://github.com/tainguyencoder/homeland',
-    demo_link:
-      'https://taikool.cloud/',
+    demo_link: 'https://taikool.cloud/',
   },
   {
     name: 'Web 3 NFT Card Game',
