@@ -7,6 +7,7 @@ export function Fox({ currentAnimation, ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(scene);
   const { actions } = useAnimations(animations, group);
+  console.log('Available animations:', animations);
 
   // This effect will run whenever the currentAnimation prop changes
   useEffect(() => {

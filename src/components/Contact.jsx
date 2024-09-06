@@ -10,7 +10,7 @@ import { slideIn } from '../utils/motion';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useRef, useState, useEffect } from 'react';
 
-import { Fox } from '../models';
+import { Fox, Dragon } from '../models';
 import { Loader } from '../components';
 
 const Contact = () => {
@@ -23,8 +23,8 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleFocus = () => setCurrentAnimation('walk');
-  const handleBlur = () => setCurrentAnimation('idle');
+  const handleFocus = () => setCurrentAnimation('Object_0');
+  const handleBlur = () => setCurrentAnimation('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,7 +69,7 @@ const Contact = () => {
 
   return (
     <div className={`relative flex lg:flex-row flex-col max-container`}>
-      <motion.div
+      <div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className=" bg-black-100 p-8 rounded-2xl flex-1 min-w-[50%] flex flex-col"
       >
@@ -133,9 +133,9 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"
       >
@@ -147,27 +147,27 @@ const Contact = () => {
             far: 1000,
           }}
         >
-          <directionalLight position={[0, 0, 1]} intensity={0.2} />{' '}
-          {/* Giảm cường độ */}
-          <ambientLight intensity={0.2} /> {/* Giảm cường độ */}
-          <pointLight position={[5, 10, 0]} intensity={1} />{' '}
-          {/* Giảm cường độ */}
+          <directionalLight position={[-5, 5, 5]} intensity={0.6} />
+          <ambientLight intensity={0.3} />
+          <pointLight position={[5, 10, 5]} intensity={1} />
+          <pointLight position={[-5, 10, -5]} intensity={0.5} />
           <spotLight
             position={[10, 10, 10]}
-            angle={0.15}
+            angle={0.2}
             penumbra={0.5}
-            intensity={1}
+            intensity={0.8}
           />
+          <pointLight position={[5, -5, 5]} castShadow />
           <Suspense fallback={<Loader />}>
-            <Fox
+            <Dragon
               currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
+              position={[0.5, -1.35, 0]}
               rotation={[12.629, -0.6, 0]}
-              scale={[0.6, 0.55, 0.6]}
+              scale={[0.015, 0.015, 0.015]}
             />
           </Suspense>
         </Canvas>
-      </motion.div>
+      </div>
     </div>
   );
 };
