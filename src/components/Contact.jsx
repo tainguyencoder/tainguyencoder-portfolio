@@ -159,12 +159,12 @@ const Contact = () => {
           />
           <pointLight position={[5, -5, 5]} castShadow />
           <Suspense fallback={<Loader />}>
-            <Dragon
+            {/* <Dragon
               currentAnimation={currentAnimation}
               position={[0.5, -1.35, 0]}
               rotation={[12.629, -0.6, 0]}
               scale={[0.015, 0.015, 0.015]}
-            />
+            /> */}
           </Suspense>
         </Canvas>
       </div>

@@ -43,8 +43,10 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-          <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            <span
+              className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500`}
+            >
               Tai Nguyen
             </span>
           </p>
@@ -59,7 +61,15 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <span
+                className={`font-extrabold text-transparent bg-clip-text ${
+                  scrolled
+                    ? 'bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500'
+                    : 'bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500'
+                }`}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </span>
             </li>
           ))}
         </ul>
@@ -89,7 +99,16 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a
+                    className={`font-extrabold text-transparent bg-clip-text ${
+                      scrolled
+                        ? 'bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500'
+                        : 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
+                    }`}
+                    href={`#${nav.id}`}
+                  >
+                    {nav.title}
+                  </a>
                 </li>
               ))}
             </ul>
