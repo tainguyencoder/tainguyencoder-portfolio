@@ -1,14 +1,22 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
-import Hero from "./Hero";
-import About from "./About";
-import Tech from "./Tech";
-import Experience from "./Experience";
-import Works from "./Works";
-import Contact from "./Contact";
-import CanvasLoader from "./Loader";
-import Education from "./Education";
+import {
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+} from './canvas';
+import Navbar from './Navbar';
+import Hero from './Hero';
+import About from './About';
+import Tech from './Tech';
+import Experience from './Experience';
+import Works from './Works';
+import Contact from './Contact';
+import CanvasLoader from './Loader';
+import Education from './Education';
+import Loader from "./Loader";
 
 export {
+  Navbar,
   Hero,
   About,
   Tech,
@@ -21,4 +29,5 @@ export {
   ComputersCanvas,
   StarsCanvas,
   Education,
+  Loader,
 };

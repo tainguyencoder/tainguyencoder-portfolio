@@ -25,6 +25,11 @@ import shirtai from './project/shirtai.webp';
 
 // others
 import github from './github.webp';
+import close from "./close.svg";
+import logo from "./logo.webp";
+import menu from "./menu.svg";
+
+
 
 export {
   typescript,
@@ -43,4 +48,7 @@ export {
   facilitybot,
   okkami,
   github,
+  close,
+  logo,
+  menu,
 };
