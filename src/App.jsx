@@ -31,11 +31,9 @@ const App = () => {
 
         <Experience />
 
-        {/* <Contact /> */}
-
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+          {/* <StarsCanvas /> */}
         </div>
       </div>
     </BrowserRouter>

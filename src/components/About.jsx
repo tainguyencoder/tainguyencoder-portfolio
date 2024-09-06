@@ -51,9 +51,16 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        🧑‍💻 I'm a Front-end developer who loves building Web applications &
-        learning new technologies. <br />
-        🐈 When I'm not coding, I'm proud father of 2 cats.
+        🧑‍💻 As a passionate Front-end developer, I specialize in crafting
+        engaging and responsive web applications. My focus is on continuous
+        learning and adopting the latest technologies to enhance my skills.
+        <br/>
+        🐈 Outside of coding, I am a proud father of two cats, enjoy exploring new
+        hobbies, and staying active.
+        <br/>
+        I am always open to new opportunities,
+        collaborations, and discussions. Let's connect and explore how we can
+        work together or share insights on technology and beyond!
       </motion.p>
 
       <div className="mt-20 flex flex-row flex-wrap justify-center gap-10">
