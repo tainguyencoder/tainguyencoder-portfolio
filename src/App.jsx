@@ -8,7 +8,6 @@ import {
   Hero,
   Tech,
   Works,
-  StarsCanvas,
   Education,
 } from './components';
 
@@ -31,10 +30,7 @@ const App = () => {
 
         <Experience />
 
-        <div className="relative z-0">
-          <Contact />
-          {/* <StarsCanvas /> */}
-        </div>
+        <Contact />
       </div>
     </BrowserRouter>
   );

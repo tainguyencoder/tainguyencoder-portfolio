@@ -18,12 +18,6 @@ module.exports = {
       screens: {
         xs: "450px",
       },
-      zIndex: {
-        '100': '100',
-      }
-      // backgroundImage: {
-      //   "hero-pattern": "url('/src/assets/herobg.webp')",
-      // },
     },
   },
   plugins: [],

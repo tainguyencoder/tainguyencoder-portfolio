@@ -5,7 +5,7 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import { SpiderMan } from '../models';
+import { Fox } from '../models';
 import { Loader } from '../components';
 
 // Hook to manage flickering effect
@@ -27,57 +27,19 @@ const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState(' ');
-  const [lightsOn, setLightsOn] = useState(false);
-  const [intensities, setIntensities] = useState({
-    directional: 0,
-    point1: 0,
-    point2: 0,
-    spot: 0,
-    point3: 0
-  });
-
-  useEffect(() => {
-    // Gradual brightening effect
-    if (!lightsOn) {
-      const startTime = Date.now();
-      const duration = 3500; // 2.5 seconds
-
-      const interval = setInterval(() => {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min(elapsed / duration, 2);
-        setIntensities({
-          directional: progress * 1,
-          point1: progress * 1,
-          point2: progress * 1,
-          spot: progress * 1,
-          point3: progress * 0.5
-        });
-
-        if (progress === 1) {
-          setLightsOn(true);
-          clearInterval(interval);
-        }
-      }, 16); // ~60fps
-    }
-  }, [lightsOn]);
-
-  // Apply flicker effect only to one side of the lights
-  const pointLightIntensity1 = useFlicker(intensities.point1);
-  const pointLightIntensity2 = useFlicker(intensities.point2);
-  const pointLightIntensity3 = intensities.point3;
+  const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleFocus = () => setCurrentAnimation('Jump');
-  const handleBlur = () => setCurrentAnimation(' ');
+  const handleFocus = () => setCurrentAnimation('walk');
+  const handleBlur = () => setCurrentAnimation('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setCurrentAnimation('Swing to land');
+    setCurrentAnimation('hit');
 
     try {
       await emailjs.send(
@@ -93,7 +55,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
       setLoading(false);
-      setCurrentAnimation(' ');
+      setCurrentAnimation('idle');
       alert('Thank you. I will get back to you as soon as possible.');
       setForm({
         name: '',
@@ -104,7 +66,7 @@ const Contact = () => {
       setLoading(false);
       console.error(error);
       alert('Ahh, something went wrong. Please try again.');
-      setCurrentAnimation(' ');
+      setCurrentAnimation('idle');
       setForm({
         name: '',
         email: '',
@@ -198,31 +160,22 @@ const Contact = () => {
             far: 1000,
           }}
         >
-          <directionalLight position={[-5, 5, 5]} intensity={intensities.directional} />
+          <directionalLight position={[0, 0, 1]} intensity={0.5} />
           <ambientLight intensity={0.5} />
-          <pointLight position={[5, 10, 5]} intensity={pointLightIntensity1} />
-          <pointLight position={[-5, 10, -5]} intensity={pointLightIntensity2} />
-          {/* <spotLight
+          <pointLight position={[5, 10, 0]} intensity={0.5} />
+          <spotLight
             position={[10, 10, 10]}
-            angle={0.2}
-            penumbra={0.5}
-            intensity={intensities.spot}
-          /> */}
-          <pointLight position={[5, -5, 5]} intensity={pointLightIntensity3} castShadow />
+            angle={0.15}
+            penumbra={1}
+            intensity={0.3}
+          />
+
           <Suspense fallback={<Loader />}>
-            <SpiderMan
+            <Fox
               currentAnimation={currentAnimation}
-              rotation={
-                currentAnimation === 'Swing to land' ? [0, 0.1, 0] : [0, 0.1, 0]
-              }
-              position={
-                currentAnimation === 'Swing to land'
-                  ? [-0.55, -0.6, 0]
-                  : [-0.55, -0.6, 0]
-              }
-              scale={
-                currentAnimation === 'Swing to land' ? [1, 1, 0.8] : [1, 1, 0.8]
-              }
+              position={[0.5, 0.35, 0]}
+              rotation={[12.629, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
             />
           </Suspense>
         </Canvas>
