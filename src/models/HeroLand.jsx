@@ -4,7 +4,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
-import scene from '../assets/3d/heroLand.glb';
+import scene from '../../public/assets/models/heroLand.glb';
 
 export function HeroLand(props) {
   const group = useRef();
