@@ -2,13 +2,15 @@ import { useFrame } from '@react-three/fiber';
 import React, { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
+
 import scene from '../assets/3d/heroLand.glb';
 
 export function HeroLand(props) {
   const group = useRef();
 
   // Load both GLTF models
-  const { nodes, materials, animations } = useGLTF(scene);
+  const { nodes, materials, animations } = useGLTF(scene, '/draco-gltf/');
 
   const { actions } = useAnimations(animations, group);
 
@@ -70,134 +72,134 @@ export function HeroLand(props) {
                   <group name="ISLE_17">
                     <mesh
                       name="ISLE_17_ile-sable_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-sable_0'].geometry}
                       material={materials['ile-sable']}
                     />
                     <mesh
                       name="ISLE_17_ile-herbe_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-herbe_0'].geometry}
                       material={materials['ile-herbe']}
                     />
                     <mesh
                       name="ISLE_17_ile-roc_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-roc_0'].geometry}
                       material={materials['ile-roc']}
                     />
                     <mesh
                       name="ISLE_17_roc_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes.ISLE_17_roc_0.geometry}
                       material={materials.material}
                     />
                     <mesh
                       name="ISLE_17_buisson_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes.ISLE_17_buisson_0.geometry}
                       material={materials.buisson}
                     />
                     <mesh
                       name="ISLE_17_maison-toit_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_maison-toit_0'].geometry}
                       material={materials['maison-toit']}
                     />
                     <mesh
                       name="ISLE_17_maison-bois_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_maison-bois_0'].geometry}
                       material={materials['maison-bois']}
                     />
                     <mesh
                       name="ISLE_17_maison-light_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_maison-light_0'].geometry}
                       material={materials['maison-light']}
                     />
-                    <mesh
+                    {/* <mesh
                       name="ISLE_17_phare-light_0"
                       castShadow
                       receiveShadow
                       geometry={nodes['ISLE_17_phare-light_0'].geometry}
                       material={materials['phare-light']}
-                    />
+                    /> */}
                     <mesh
                       name="ISLE_17_maison-or_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_maison-or_0'].geometry}
                       material={materials['maison-or']}
                     />
                     <mesh
                       name="ISLE_17_bato-bois_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_bato-bois_0'].geometry}
                       material={materials['bato-bois']}
                     />
-                    <mesh
+                    {/* <mesh
                       name="ISLE_17_bato-voile_0"
                       castShadow
                       receiveShadow
                       geometry={nodes['ISLE_17_bato-voile_0'].geometry}
                       material={materials['bato-voile']}
-                    />
+                    /> */}
                     <mesh
                       name="ISLE_17_palmier-tronc_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_palmier-tronc_0'].geometry}
                       material={materials['palmier-tronc']}
                     />
                     <mesh
                       name="ISLE_17_palmier-feuilles_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_palmier-feuilles_0'].geometry}
                       material={materials['palmier-feuilles']}
                     />
                     <mesh
                       name="ISLE_17_ile-o_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-o_0'].geometry}
                       material={materials['ile-o']}
                     />
                     <mesh
                       name="ISLE_17_ile-ecume_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-ecume_0'].geometry}
                       material={materials['ile-ecume']}
                     />
-                    <mesh
+                    {/* <mesh
                       name="ISLE_17_ile-nuage_0"
                       castShadow
                       receiveShadow
                       geometry={nodes['ISLE_17_ile-nuage_0'].geometry}
                       material={materials['ile-nuage']}
-                    />
+                    /> */}
                     <mesh
                       name="ISLE_17_LUNE_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes.ISLE_17_LUNE_0.geometry}
                       material={materials.LUNE}
                     />
                     <mesh
                       name="ISLE_17_ile-lave_0"
-                      castShadow
-                      receiveShadow
+                      castShadow={false}
+                      receiveShadow={false}
                       geometry={nodes['ISLE_17_ile-lave_0'].geometry}
                       material={materials['ile-lave']}
                     />
