@@ -5,7 +5,7 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import { Fox } from '../models';
+// import { Fox } from '../models';
 import { Loader } from '../components';
 
 // Hook to manage flickering effect
@@ -171,12 +171,12 @@ const Contact = () => {
           />
 
           <Suspense fallback={<Loader />}>
-            <Fox
+            {/* <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.629, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
-            />
+            /> */}
           </Suspense>
         </Canvas>
       </div>

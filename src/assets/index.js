@@ -1,14 +1,3 @@
-// about
-import typescript from './about/typescript.webp';
-import react from './about/react.webp';
-import vue from './about/vue.webp';
-import tailwindcss from './about/tailwindcss.webp';
-
-// tech
-import threejs from './tech/threejs.webp';
-import git from './tech/git.webp';
-import nextjs from './tech/nextjs.webp';
-
 // education
 import nbk from './education/nbk.webp';
 import iu from './education/iu.webp';
@@ -25,20 +14,8 @@ import shirtai from './project/shirtai.webp';
 
 // others
 import github from './github.webp';
-import close from "./close.svg";
-import logo from "./logo.webp";
-import menu from "./menu.svg";
-
-
 
 export {
-  typescript,
-  vue,
-  react,
-  tailwindcss,
-  threejs,
-  git,
-  nextjs,
   nbk,
   iu,
   cyber,
@@ -48,7 +25,4 @@ export {
   facilitybot,
   okkami,
   github,
-  close,
-  logo,
-  menu,
 };

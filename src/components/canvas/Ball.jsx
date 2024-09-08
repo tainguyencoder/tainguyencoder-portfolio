@@ -53,7 +53,7 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}> {/* Container div with overflow hidden */}
+    <div className="w-[150px] h-[150px]">
       <Canvas
         frameloop="demand"
         dpr={[1, 2]}

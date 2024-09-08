@@ -1,42 +1,20 @@
 import { BrowserRouter } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
 import {
-  Navbar,
-  About,
   Contact,
   Experience,
-  Hero,
-  Tech,
   Works,
   Education,
+  Projects
 } from './components';
+// components
+import Navbar from './components/Navbar'
+import StarsCanvas from './components/canvas/Stars';
+// sections
+import Hero from './sections/Hero'
+import About from './sections/About'
+
 
 const App = () => {
-  const [loadContact, setLoadContact] = useState(false);
-  const contactRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setLoadContact(true);
-          observer.disconnect(); // Stop observing once loaded
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
-
-    return () => {
-      if (contactRef.current) {
-        observer.disconnect();
-      }
-    };
-  }, []);
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -44,16 +22,20 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-
+        <div className="relative z-0">
         <About />
-        <Tech />
-        <Education />
+
+          <StarsCanvas />
+        </div>
+
+        {/* <Education />
+        <Projects />
         <Works />
         <Experience />
 
         <div ref={contactRef}>
-          {loadContact && <Contact />} {/* Load only when in view */}
-        </div>
+          {loadContact && <Contact />}
+        </div> */}
       </div>
     </BrowserRouter>
   );

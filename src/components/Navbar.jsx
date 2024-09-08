@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { styles } from '../styles';
+// data
 import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+// images
+import logo from '/assets/navbar/logo.webp'
+import menu from '/assets/navbar/menu.svg'
+import close from '/assets/navbar/close.svg'
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -43,13 +46,6 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            <span
-              className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500`}
-            >
-              Tai Nguyen
-            </span>
-          </p>
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
