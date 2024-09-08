@@ -1,9 +1,9 @@
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useState, useEffect } from 'react';
+
 // components
 import CanvasLoader from '../components/CanvasLoader'
 import Island from '../models/Island'
-import DemoComputer from '../models/DemoComputer.jsx';
 
 const Hero = () => {
   return (
@@ -28,7 +28,6 @@ const Hero = () => {
             groundColor="#333333"
             intensity={0.8}
           />
-          {/* <DemoComputer /> */}
           <Island />
         </Suspense>
       </Canvas>

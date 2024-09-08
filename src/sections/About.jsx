@@ -3,7 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
 // wrapper
-import { SectionWrapper } from '../hoc';
+import SectionWrapper from '../hoc/SectionWrapper';
 // styles
 import { styles } from '../styles';
 // motion

@@ -1,18 +1,15 @@
 import { BrowserRouter } from 'react-router-dom';
-import {
-  Contact,
-  Experience,
-  Works,
-  Education,
-  Projects
-} from './components';
+
 // components
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 import StarsCanvas from './components/canvas/Stars';
 // sections
-import Hero from './sections/Hero'
-import About from './sections/About'
-
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Education from './sections/Education';
+import Projects from './sections/Projects';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
 
 const App = () => {
   return (
@@ -23,19 +20,17 @@ const App = () => {
           <Hero />
         </div>
         <div className="relative z-0">
-        <About />
-
+          <About />
           <StarsCanvas />
         </div>
 
-        {/* <Education />
+        <Education />
+
         <Projects />
-        <Works />
+
         <Experience />
 
-        <div ref={contactRef}>
-          {loadContact && <Contact />}
-        </div> */}
+        <Contact />
       </div>
     </BrowserRouter>
   );
