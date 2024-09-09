@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 import StarsCanvas from './components/canvas/Stars';
 // sections
 import Hero from './sections/Hero';
@@ -31,6 +32,8 @@ const App = () => {
         <Projects />
 
         <Contact />
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
