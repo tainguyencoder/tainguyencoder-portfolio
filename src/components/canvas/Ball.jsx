@@ -9,7 +9,7 @@ import {
 } from '@react-three/drei';
 import { a, useSpring } from '@react-spring/three'; // Import from react-spring
 
-import CanvasLoader from '../Loader';
+import CanvasLoader from '../CanvasLoader';
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);

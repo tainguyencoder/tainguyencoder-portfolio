@@ -4,16 +4,16 @@ const navLinks = [
     title: 'About',
   },
   {
-    id: 'edu',
+    id: 'education',
     title: 'Education',
+  },
+  {
+    id: 'experience',
+    title: 'Experience',
   },
   {
     id: 'project',
     title: 'Projects',
-  },
-  {
-    id: 'work',
-    title: 'Work',
   },
   {
     id: 'contact',
@@ -263,6 +263,39 @@ const experiences = [
       'Write unit test and integration test using Jest & React Testing Library',
       'Deploy to Vercel for QA/QC from Okkami to test',
     ],
+  },
+];
+
+export const workExperiences = [
+  {
+    id: 1,
+    name: 'Freelancer',
+    pos: 'Front-End Web Developer',
+    duration: 'Aug 2024 - Present',
+    title:
+      'As a freelance front-end web developer, I create responsive, interactive websites and applications, turning designs into functional user experiences for various clients.',
+    icon: '/assets/experience/freelancer.webp',
+    animation: 'victory',
+  },
+  {
+    id: 2,
+    name: 'Okkami',
+    pos: 'Front-end Web Developer',
+    duration: 'Sep 2022 - July 2024',
+    title:
+      'Build the codebase with linters, CI/CD using GitHub Actions, Dockerfile, responsive UI/UX, Jest tests, and deploy to Vercel for QA/QC.',
+    icon: '/assets/experience/okkami.webp',
+    animation: 'clapping',
+  },
+  {
+    id: 3,
+    name: 'Facilitybot',
+    pos: 'Front-end Web Developer',
+    duration: 'Jan 2022 - Aug 2022',
+    title:
+      'Implement searchable map, CRUD with sortable tables, nested drag-and-drop, responsive columns, ChartJS stats, and customizable dashboard.',
+    icon: '/assets/experience/facilitybot.webp',
+    animation: 'salute',
   },
 ];
 

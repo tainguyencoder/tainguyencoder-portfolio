@@ -126,7 +126,7 @@ const Contact = () => {
               <span className="text-white font-medium mb-4">Your Message</span>
               <input
                 name="message"
-                placeholder="Want me building stuff for you ? Hit me on Email"
+                placeholder="Want me building stuff for you ?"
                 rows="4"
                 value={form.message}
                 onChange={handleChange}
