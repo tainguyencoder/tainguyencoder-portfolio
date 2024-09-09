@@ -69,9 +69,27 @@ const Contact = () => {
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
-              <p className={styles.sectionSubText}>Get in touch</p>
+              <div className="flex items-center justify-between">
+                <p className={styles.sectionSubText}>Get in touch</p>
+
+                <button
+                  disabled={loading}
+                  className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                >
+                  <a
+                    href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View my CV
+                  </a>
+                </button>
+              </div>
               <h3 className={styles.sectionHeadText}>Contact</h3>
-              <p className={styles.rainbow_gradient}>tainguyencoder@gmail.com</p>
+
+              <p className={styles.rainbow_gradient}>
+                tainguyencoder@gmail.com
+              </p>
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
