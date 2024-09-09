@@ -72,15 +72,14 @@ const Contact = () => {
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
               <div className="flex items-center justify-between">
                 <p className={styles.sectionSubText}>Get in touch</p>
-
                 <button
-                  disabled={loading}
-                  className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                  className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-4 px-10 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center justify-center"
                 >
                   <a
                     href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full h-full"
                   >
                     View CV
                   </a>

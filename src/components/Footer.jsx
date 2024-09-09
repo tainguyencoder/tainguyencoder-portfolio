@@ -43,9 +43,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-white-500">
+      <p className="text-white-800">
         Design & Develop with <span className="text-red-500">❤️</span> by Tai
-        Nguyen.
+        Nguyen
       </p>
     </footer>
   );
