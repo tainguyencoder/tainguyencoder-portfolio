@@ -70,21 +70,7 @@ const Contact = () => {
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
-              <div className="flex items-center justify-between">
-                <p className={styles.sectionSubText}>Get in touch</p>
-                <button
-                  className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-4 px-10 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center justify-center"
-                >
-                  <a
-                    href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full h-full"
-                  >
-                    View CV
-                  </a>
-                </button>
-              </div>
+              <p className={styles.sectionSubText}>Get in touch</p>
               <h3 className={styles.sectionHeadText}>Contact</h3>
 
               <p className={styles.rainbow_gradient}>
@@ -143,16 +129,27 @@ const Contact = () => {
                     autoComplete="off"
                   />
                 </label>
+                <div className="flex justify-between w-full">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    className="bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary"
+                  >
+                    {loading ? 'Sending...' : 'Send'}
+                  </button>
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  onFocus={handleFocus}
-                  onBlur={handleBlur}
-                  className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-                >
-                  {loading ? 'Sending...' : 'Send'}
-                </button>
+                  <button className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary">
+                    <a
+                      href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View CV
+                    </a>
+                  </button>
+                </div>
               </form>
             </div>
           </div>
