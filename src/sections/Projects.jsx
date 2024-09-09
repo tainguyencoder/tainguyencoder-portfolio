@@ -46,9 +46,8 @@ const Projects = () => {
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
-
-      <div className="grid xl:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl bg-tertiary shadow-black-200">
+      <div className="grid xl:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full rounded-2xl">
+        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl bg-tertiary shadow-black-200 rounded-2xl">
           <div className="absolute top-0 right-0">
             <img
               src={currentProject.spotlight}
@@ -72,7 +71,6 @@ const Projects = () => {
             <p className="text-white text-2xl font-semibold animatedText">
               {currentProject.title}
             </p>
-
             <p className="animatedText">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
@@ -85,7 +83,6 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-
             <a
               className="flex items-center gap-2 cursor-pointer text-white-600"
               href={currentProject.href}
@@ -114,7 +111,6 @@ const Projects = () => {
                 className="w-5 h-5"
               />
             </button>
-
             <button
               className="arrow-btn"
               onClick={() => handleNavigation('next')}
@@ -127,8 +123,8 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        <div className="w-full green-pink-gradient p-[1px]">
-          <div className="bg-tertiary xl:h-full lg:h-[650px] md:h-[550px] h-[350px]">
+        <div className="w-full green-pink-gradient p-[1px] rounded-tr-2xl rounded-tl-2xl">
+          <div className="bg-tertiary xl:h-full lg:h-[650px] md:h-[550px] h-[350px] rounded-tr-2xl rounded-tl-2xl">
             <Canvas>
               <ambientLight intensity={Math.PI} />
               <directionalLight position={[10, 10, 5]} />

@@ -13,7 +13,9 @@ const styles = {
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
   rainbow_gradient:
-    "@apply bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text text-transparent"
+    "@apply bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"
 };
+
+
 
 export { styles };

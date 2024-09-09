@@ -3,22 +3,18 @@ import React from 'react';
 import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-
 import { motion } from 'framer-motion';
 import { textVariant } from '../utils/motion';
-
-// components
-import Developer from '../models/Developer';
-import CanvasLoader from '../components/CanvasLoader.jsx';
 
 // styles
 import { styles } from '../styles';
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
+// components
+import Developer from '../models/Developer';
+import CanvasLoader from '../components/CanvasLoader.jsx';
 // data
 import { workExperiences } from '../constants';
-
-import StarsCanvas from '../components/canvas/Stars';
 
 const Experience = () => {
   const [animationName, setAnimationName] = useState('idle');
@@ -37,8 +33,8 @@ const Experience = () => {
 
       <div className="work-container">
         {/* 3D model */}
-        <div className="w-full green-pink-gradient p-[1px]">
-          <div className="bg-tertiary xl:h-full lg:h-full md:h-[550px] h-[350px]">
+        <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
+          <div className="bg-tertiary rounded-2xl xl:h-full lg:h-full md:h-[550px] h-[350px]">
             <Canvas
               camera={{
                 position: [0, 3, 5],
@@ -51,14 +47,12 @@ const Experience = () => {
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[10, 10, 10]} intensity={0.5} />
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
               <Suspense fallback={<CanvasLoader />}>
                 <group position-y={-4} scale={3.3}>
                   <Developer animationName={animationName} />
                 </group>
               </Suspense>
             </Canvas>
-            {/* <StarsCanvas /> */}
           </div>
         </div>
         {/* content */}

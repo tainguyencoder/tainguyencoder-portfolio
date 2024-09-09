@@ -312,12 +312,8 @@ body {
     @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
   }
 
-  .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-600 border border-black-300;
-  }
-
   .work-content {
-    @apply col-span-2 rounded-lg bg-tertiary border border-tertiary;
+    @apply col-span-2 bg-tertiary border border-tertiary rounded-2xl;
   }
 
   .work-content_container {

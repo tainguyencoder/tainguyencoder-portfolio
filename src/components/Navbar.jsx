@@ -4,12 +4,11 @@ import { styles } from '../styles';
 // data
 import { navLinks } from '../constants';
 // images
-import logo from '/assets/navbar/logo.webp'
-import menu from '/assets/navbar/menu.svg'
-import close from '/assets/navbar/close.svg'
+import logo from '/assets/navbar/logo.webp';
+import menu from '/assets/navbar/menu.svg';
+import close from '/assets/navbar/close.svg';
 
 const Navbar = () => {
-  const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,28 +40,19 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive('');
             window.scrollTo(0, 0);
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? 'text-white' : 'text-secondary'
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
             >
               <span
-                className={`font-extrabold text-transparent bg-clip-text ${
-                  scrolled
-                    ? 'bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500'
-                    : 'bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500'
-                }`}
+                className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500`}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </span>
@@ -70,7 +60,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -87,20 +77,13 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? 'text-white' : 'text-secondary'
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
                   }}
                 >
                   <a
-                    className={`font-extrabold text-transparent bg-clip-text ${
-                      scrolled
-                        ? 'bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500'
-                        : 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
-                    }`}
+                    className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500`}
                     href={`#${nav.id}`}
                   >
                     {nav.title}
