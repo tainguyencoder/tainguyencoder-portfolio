@@ -3,17 +3,14 @@ import { Canvas } from '@react-three/fiber';
 import { slideIn } from '../utils/motion';
 import emailjs from '@emailjs/browser';
 
-import { Float, OrbitControls } from '@react-three/drei';
-
 // styles
 import { styles } from '../styles';
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
 // 3D model
-import Book from '../models/Book';
+import Fox from '../models/Fox';
 // components
 import CanvasLoader from '../components/CanvasLoader';
-import { UI } from '../components/UI';
 
 const Contact = () => {
   const formRef = useRef();
@@ -68,8 +65,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-container relative flex flex-col xl:flex-row">
-      <div className="w-full xl:w-1/2 flex flex-col">
+    <div className="relative flex lg:flex-row flex-col max-container">
+      <div className="lg:w-1/2 flex flex-col">
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
@@ -163,42 +160,32 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="w-full xl:w-1/2 h-[350px] md:h-[550px] lg:h-[650px]">
-        <UI />
-        <Canvas shadows camera={{ position: [-0.5, 1, 4], fov: 45 }}>
-          <group position-y={0} scale={[1.2, 1.2, 1.2]}>
-            <Suspense fallback={null}>
-              <Float
-                rotation-x={-Math.PI / 4}
-                floatIntensity={1}
-                speed={2}
-                rotationIntensity={2}
-              >
-                <Book />
-              </Float>
-              <OrbitControls />
-              <directionalLight
-                position={[2, 5, 2]}
-                intensity={1}
-                castShadow
-                shadow-mapSize-width={2048}
-                shadow-mapSize-height={2048}
-                shadow-bias={-0.0001}
-              />
-              <directionalLight
-                position={[0, -5, 0]}
-                intensity={2}
-                castShadow
-                shadow-mapSize-width={2048}
-                shadow-mapSize-height={2048}
-                shadow-bias={-0.0001}
-              />
-              <mesh position-y={-1.5} rotation-x={-Math.PI / 2} receiveShadow>
-                <planeGeometry args={[100, 100]} />
-                <shadowMaterial transparent opacity={0.2} />
-              </mesh>
-            </Suspense>
-          </group>
+      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+        <Canvas
+          camera={{
+            position: [0, 0, 5],
+            fov: 75,
+            near: 0.1,
+            far: 1000,
+          }}
+        >
+          <directionalLight position={[0, 0, 1]} intensity={0.5} />
+          <ambientLight intensity={0.5} />
+          <pointLight position={[5, 10, 0]} intensity={0.5} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            intensity={0.3}
+          />
+          <Suspense fallback={<CanvasLoader />}>
+            <Fox
+              currentAnimation={currentAnimation}
+              position={[0.5, 0.35, 0]}
+              rotation={[12.629, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
+            />
+          </Suspense>
         </Canvas>
       </div>
     </div>
