@@ -53,7 +53,8 @@ const About = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm{' '}
+            Hi, I'm
+            <br/>
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
               Tai Nguyen
             </span>
