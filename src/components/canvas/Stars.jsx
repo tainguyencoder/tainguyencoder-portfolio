@@ -28,7 +28,7 @@ const Stars = (props) => {
   const ref = useRef();
 
   const [sphere] = useState(() => {
-    const positions = generateSphere(60, 0.9); // Manually generate points
+    const positions = generateSphere(150, 1); // Manually generate points
     return positions;
   });
 
