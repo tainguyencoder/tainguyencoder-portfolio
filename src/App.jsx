@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 // components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import StarsCanvas from './components/canvas/Stars';
 // sections
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -27,10 +26,7 @@ const App = () => {
 
         <Projects />
 
-        <div className="relative z-0">
-          <StarsCanvas />
-          <Contact />
-        </div>
+        <Contact />
 
         <Footer />
       </div>
