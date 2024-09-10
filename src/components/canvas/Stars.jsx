@@ -1,18 +1,34 @@
 import { useState, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial, Preload } from '@react-three/drei';
-import * as random from 'maath/random/dist/maath-random.esm';
+// import * as random from 'maath/random/dist/maath-random.esm'; // Disable this for now
+
+const generateSphere = (count, radius) => {
+  const positions = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    // Generate random spherical coordinates
+    const theta = Math.random() * 2 * Math.PI;
+    const phi = Math.acos(2 * Math.random() - 1);
+    const r = radius * Math.cbrt(Math.random());
+
+    // Convert spherical to cartesian coordinates
+    const x = r * Math.sin(phi) * Math.cos(theta);
+    const y = r * Math.sin(phi) * Math.sin(theta);
+    const z = r * Math.cos(phi);
+
+    // Assign values to positions array
+    positions[i * 3] = x;
+    positions[i * 3 + 1] = y;
+    positions[i * 3 + 2] = z;
+  }
+  return positions;
+};
 
 const Stars = (props) => {
   const ref = useRef();
 
   const [sphere] = useState(() => {
-    const positions = random.inSphere(new Float32Array(999), { radius: 1.2 });
-    for (let i = 0; i < positions.length; i++) {
-      if (isNaN(positions[i]) || positions[i] === undefined) {
-        positions[i] = 0;
-      }
-    }
+    const positions = generateSphere(60, 0.9); // Manually generate points
     return positions;
   });
 
