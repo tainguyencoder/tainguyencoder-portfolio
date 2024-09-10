@@ -1,9 +1,8 @@
-import React from 'react';
-
-import { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
+import { Reorder } from 'framer-motion';
 import { textVariant } from '../utils/motion';
 
 // styles
@@ -16,8 +15,28 @@ import CanvasLoader from '../components/CanvasLoader.jsx';
 // data
 import { workExperiences } from '../constants';
 
+// Function to shuffle array
+const shuffleArray = (array) => {
+  let shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const Experience = () => {
   const [animationName, setAnimationName] = useState('idle');
+  const [items, setItems] = useState(workExperiences);
+
+  // Function to shuffle items periodically
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setItems((prevItems) => shuffleArray(prevItems));
+    }, 2500); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="w-full text-white-600">
@@ -56,11 +75,15 @@ const Experience = () => {
           </div>
         </div>
         {/* content */}
-        <div className="work-content">
-          <div className="sm:py-10 py-5 sm:px-5 px-2.5">
-            {workExperiences.map((item, index) => (
+        <Reorder.Group
+          axis="y"
+          values={items}
+          onReorder={setItems}
+          className="work-content"
+        >
+          {items.map((item) => (
+            <Reorder.Item key={item.id} value={item}>
               <div
-                key={index}
                 onClick={() => setAnimationName(item.animation.toLowerCase())}
                 onPointerOver={() =>
                   setAnimationName(item.animation.toLowerCase())
@@ -86,9 +109,9 @@ const Experience = () => {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </Reorder.Item>
+          ))}
+        </Reorder.Group>
       </div>
     </div>
   );

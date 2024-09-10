@@ -313,7 +313,7 @@ body {
   }
 
   .work-content {
-    @apply col-span-2 bg-tertiary border border-tertiary rounded-2xl;
+    @apply col-span-2 bg-tertiary border border-tertiary rounded-2xl sm:py-10 py-5 sm:px-5 px-2.5;
   }
 
   .work-content_container {
@@ -325,7 +325,7 @@ body {
   }
 
   .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-red-600 group-first:bg-yellow-500 group-last:bg-white-700;
+    @apply flex-1 w-0.5 mt-4 h-full bg-black-500 group-hover:bg-cyan-400;
   }
 
   /* contact section */
@@ -398,4 +398,29 @@ body {
   100% {
     transform: rotate(0deg);
   }
+}
+
+.progress-circle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(50%);
+  z-index: 9999; /* Ensure it stays on top */
+  width: 45px;
+  height: 45px;
+}
+
+.bg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10;
+}
+
+.indicator {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: url(#aura-gradient);
+  transform: rotate(90deg); /* Rotate to start progress from the top */
+  transform-origin: 50% 50%;
 }

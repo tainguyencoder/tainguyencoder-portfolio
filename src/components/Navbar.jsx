@@ -48,9 +48,7 @@ const Navbar = () => {
 
         <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-            >
+            <li key={nav.id}>
               <span
                 className={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500`}
               >
