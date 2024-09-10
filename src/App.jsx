@@ -27,14 +27,12 @@ const App = () => {
 
         <Projects />
 
-
         <div className="relative z-0">
           <StarsCanvas />
-
           <Contact />
-
-          <Footer />
         </div>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
