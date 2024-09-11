@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { motion, AnimatePresence, Reorder } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { textVariant } from '../utils/motion';
 
 // styles
@@ -42,9 +42,9 @@ const ExperienceCardPopup = ({ experience, onClose }) => {
   }, [onClose]);
 
   const variants = {
-    hidden: { opacity: 0, scale: 0.9, y: 50 },  // Initial state
-    visible: { opacity: 1, scale: 1, y: 0 },    // Final state
-    exit: { opacity: 0, scale: 0.9, y: 50 }     // State when exiting
+    hidden: { opacity: 0, scale: 0.9, y: 50 }, // Initial state
+    visible: { opacity: 1, scale: 1, y: 0 }, // Final state
+    exit: { opacity: 0, scale: 0.9, y: 50 }, // State when exiting
   };
 
   return (
@@ -54,11 +54,11 @@ const ExperienceCardPopup = ({ experience, onClose }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       variants={variants}
-      transition= {{
-        type: "tween",
+      transition={{
+        type: 'tween',
         delay: 0.2,
         duration: 0.8,
-        ease: "easeOut",
+        ease: 'easeOut',
       }}
     >
       <div ref={popupRef} className="popup-content group">
@@ -140,48 +140,42 @@ const Experience = () => {
           </div>
         </div>
         {/* content */}
-        <Reorder.Group
-          axis="y"
-          values={items}
-          onReorder={setItems}
-          className="work-content"
-        >
+        <div className="work-content">
           {items.map((item) => (
-            <Reorder.Item key={item.id} value={item}>
-              <motion.div
-                layoutId={item.id} // Assign a unique layout ID
-                onClick={() => setSelectedId(item.id)} // Open the card on click
+            <motion.div
+              key={item.id}
+              layoutId={item.id} // Assign a unique layout ID for animation
+              onClick={() => setSelectedId(item.id)} // Open the card on click
+            >
+              <div
+                onClick={() => setAnimationName(item.animation.toLowerCase())}
+                onPointerOver={() =>
+                  setAnimationName(item.animation.toLowerCase())
+                }
+                onPointerOut={() => setAnimationName('idle')}
+                className="work-content_container group"
               >
-                <div
-                  onClick={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOver={() =>
-                    setAnimationName(item.animation.toLowerCase())
-                  }
-                  onPointerOut={() => setAnimationName('idle')}
-                  className="work-content_container group"
-                >
-                  <div className="flex flex-col h-full justify-start items-center py-2">
-                    <div className="work-content_logo">
-                      <img className="w-12 h-12" src={item.icon} alt="" />
-                    </div>
-
-                    <div className="work-content_bar" />
+                <div className="flex flex-col h-full justify-start items-center py-2">
+                  <div className="work-content_logo">
+                    <img className="w-12 h-12" src={item.icon} alt="" />
                   </div>
 
-                  <div className="sm:p-5 px-2.5 py-5">
-                    <p className="font-bold text-white-800">{item.name}</p>
-                    <p className="text-sm mb-5">
-                      {item.pos} -- <span>{item.duration}</span>
-                    </p>
-                    <p className="group-hover:text-white transition-all ease-in-out duration-500">
-                      {item.title}
-                    </p>
-                  </div>
+                  <div className="work-content_bar" />
                 </div>
-              </motion.div>
-            </Reorder.Item>
+
+                <div className="sm:p-5 px-2.5 py-5">
+                  <p className="font-bold text-white-800">{item.name}</p>
+                  <p className="text-sm mb-5">
+                    {item.pos} -- <span>{item.duration}</span>
+                  </p>
+                  <p className="group-hover:text-white transition-all ease-in-out duration-500">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           ))}
-        </Reorder.Group>
+        </div>
         <AnimatePresence>
           {selectedId && (
             <ExperienceCardPopup

@@ -11,7 +11,7 @@ const Footer = () => {
             <img
               src="/assets/footer/github.webp"
               alt="github"
-              className="w-1/2 h-1/2"
+              className="social-icon-img"
             />
           </a>
         </div>
@@ -24,7 +24,7 @@ const Footer = () => {
             <img
               src="/assets/footer/linkedin.webp"
               alt="linkedin"
-              className="w-1/2 h-1/2"
+              className="social-icon-img"
             />
           </a>
         </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             <img
               src="/assets/footer/zalo.webp"
               alt="zalo"
-              className="w-1/2 h-1/2"
+              className="social-icon-img"
             />
           </a>
         </div>
