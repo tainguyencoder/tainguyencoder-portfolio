@@ -108,7 +108,7 @@ const Projects = () => {
               <img
                 src="/assets/projects/left-arrow.webp"
                 alt="left arrow"
-                className="w-5 h-5"
+                className="w-6 h-5"
               />
             </button>
             <button
