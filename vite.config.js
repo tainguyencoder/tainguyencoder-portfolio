@@ -8,5 +8,6 @@ export default defineConfig({
   assetsInclude: ['**/*.glb'],
   build: {
     sourcemap: true, // Bật tạo source maps cho production
+    minify: 'terser',
   },
 });
