@@ -93,9 +93,9 @@ const Projects = () => {
                 Check Live Site
               </span>
               <img
-                src="/assets/projects/arrow-up.png"
+                src="/assets/projects/arrow-up.webp"
                 alt="arrow"
-                className="w-4 h-4"
+                className="w-5 h-5"
               />
             </a>
           </div>
@@ -106,7 +106,7 @@ const Projects = () => {
               onClick={() => handleNavigation('previous')}
             >
               <img
-                src="/assets/projects/left-arrow.png"
+                src="/assets/projects/left-arrow.webp"
                 alt="left arrow"
                 className="w-5 h-5"
               />
@@ -116,7 +116,7 @@ const Projects = () => {
               onClick={() => handleNavigation('next')}
             >
               <img
-                src="/assets/projects/right-arrow.png"
+                src="/assets/projects/right-arrow.webp"
                 alt="right arrow"
                 className="w-5 h-5"
               />
