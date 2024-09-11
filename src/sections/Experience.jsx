@@ -15,28 +15,9 @@ import CanvasLoader from '../components/CanvasLoader.jsx';
 // data
 import { workExperiences } from '../constants';
 
-// Function to shuffle array
-const shuffleArray = (array) => {
-  let shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-};
-
 const Experience = () => {
   const [animationName, setAnimationName] = useState('idle');
   const [items, setItems] = useState(workExperiences);
-
-  // Function to shuffle items periodically
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setItems((prevItems) => shuffleArray(prevItems));
-    }, 2500); // Change every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="w-full text-white-600">
