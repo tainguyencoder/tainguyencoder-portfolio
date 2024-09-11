@@ -11,6 +11,7 @@ import SectionWrapper from '../hoc/SectionWrapper';
 import Fox from '../models/Fox';
 // components
 import CanvasLoader from '../components/CanvasLoader';
+import Button3D from '../components/Button 3D/Button3D';
 
 const Contact = () => {
   const formRef = useRef();
@@ -70,12 +71,18 @@ const Contact = () => {
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
-              <p className={styles.sectionSubText}>Get in touch</p>
-              <h3 className={styles.sectionHeadText}>Contact</h3>
-
-              <p className={styles.rainbow_gradient}>
+              {/* <p className={styles.sectionSubText}>Get in touch</p> */}
+              <div className="flex justify-center m-12">
+                <h3 className={styles.sectionHeadText}>
+                <Button3D
+                    title="Contact"
+                    link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
+                  />
+                </h3>
+              </div>
+              {/* <p className={styles.rainbow_gradient}>
                 tainguyencoder@gmail.com
-              </p>
+              </p> */}
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -129,31 +136,16 @@ const Contact = () => {
                     autoComplete="off"
                   />
                 </label>
-                <div className="flex justify-between w-full">
+                <div className="flex flex-col xs:flex-row gap-10 xs:gap-0 justify-between">
                   <button
                     type="submit"
                     disabled={loading}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
-                    className="bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary"
+                    className="bg-tertiary py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary w-auto self-start md:self-auto"
                   >
                     {loading ? 'Sending...' : 'Send'}
                   </button>
-
-                  <a
-                    href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 rounded-xl outline-none text-white font-bold shadow-md shadow-primary inline-block"
-                    style={{
-                      minWidth: '120px',
-                      minHeight: '24px',
-                      textAlign: 'center',
-                      lineHeight: '44px',
-                    }} // Ensure minimum size and align text
-                  >
-                    View CV
-                  </a>
                 </div>
               </form>
             </div>

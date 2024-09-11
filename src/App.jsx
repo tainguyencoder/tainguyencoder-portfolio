@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-// Scroll-linked animations
-import SectionWithProgress from './components/SectionWithProgress';
+
 // sections
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,27 +12,25 @@ import Contact from './sections/Contact';
 
 const App = () => {
   return (
-    <SectionWithProgress>
-      <BrowserRouter>
-        <div className="relative z-0 bg-primary">
-          <Navbar />
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <Navbar />
 
-          <Hero />
+        <Hero />
 
-          <About />
+        <About />
 
-          <Education />
+        <Education />
 
-          <Experience />
+        <Experience />
 
-          <Projects />
+        <Projects />
 
-          <Contact />
+        <Contact />
 
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </SectionWithProgress>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 
