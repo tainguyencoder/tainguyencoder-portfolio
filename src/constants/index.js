@@ -273,19 +273,35 @@ export const workExperiences = [
     pos: 'Front-End Web Developer',
     duration: 'Aug 2024 - Present',
     title:
-      'As a freelance front-end web developer, I create responsive, interactive websites and applications, turning designs into functional user experiences for various clients.',
+      'Expert in crafting dynamic and responsive landing pages, optimizing web performance, and ensuring seamless user experiences. Click to read more...',
+
     icon: '/assets/experience/freelancer.webp',
     animation: 'victory',
+    points: [
+      'Develop landing pages using React and Tailwind CSS.',
+      'Optimize web performance and load times.',
+      'Create interactive UI elements like sliders and modals.',
+      'Ensure responsive design and cross-browser compatibility.',
+      'Implement basic SEO and provide ongoing maintenance.',
+    ],
   },
   {
     id: 2,
     name: 'Okkami',
     pos: 'Front-end Web Developer',
     duration: 'Sep 2022 - July 2024',
-    title:
-      'Build the codebase with linters, CI/CD using GitHub Actions, Dockerfile, responsive UI/UX, Jest tests, and deploy to Vercel for QA/QC.',
     icon: '/assets/experience/okkami.webp',
     animation: 'clapping',
+    title:
+      'Specializing in robust web development, I handle everything from codebase setup and UI/UX design to testing and deployment. Click to read more ...',
+    points: [
+      'Build the code base',
+      'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub',
+      'Code the UI/UX following the mobile app',
+      'Handle responsive',
+      'Write unit test and integration test using Jest & React Testing Library',
+      'Deploy to Vercel for QA/QC from Okkami to test',
+    ],
   },
   {
     id: 3,
@@ -293,9 +309,17 @@ export const workExperiences = [
     pos: 'Front-end Web Developer',
     duration: 'Jan 2022 - Aug 2022',
     title:
-      'Implement searchable map, CRUD with sortable tables, nested drag-and-drop, responsive columns, ChartJS stats, and customizable dashboard.',
+      'With expertise in web development, I create dynamic applications featuring advanced search, interactive dashboards, and responsive designs. Click to read more ...',
     icon: '/assets/experience/facilitybot.webp',
     animation: 'salute',
+    points: [
+      'Implement the search function by drawing an area on the map',
+      'Create CRUD pages with table that con sort, filter. Also forms and handle validation',
+      'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features',
+      'Handle responsive column',
+      'Use ChartJS to make a graph that show the statistics',
+      'Create custom dashboard that help users can pin, arrange tables and statistical graphs',
+    ],
   },
 ];
 
