@@ -10,8 +10,6 @@ import Education from './sections/Education';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
 import Contact from './sections/Contact';
-// canvas
-import StarsCanvas from './components/canvas/Starts';
 
 const App = () => {
   return (
@@ -22,10 +20,7 @@ const App = () => {
 
           <Hero />
 
-          <div className="relative z-0">
-            <About />
-            <StarsCanvas />
-          </div>
+          <About />
 
           <Education />
 

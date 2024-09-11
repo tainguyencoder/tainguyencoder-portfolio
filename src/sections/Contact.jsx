@@ -140,11 +140,15 @@ const Contact = () => {
                     {loading ? 'Sending...' : 'Send'}
                   </button>
 
-                  <button className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary">
+                  <button
+                    className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 py-4 px-10 rounded-xl outline-none text-white font-bold shadow-md shadow-primary"
+                    style={{ minWidth: '150px', minHeight: '44px' }} // Ensure minimum size
+                  >
                     <a
                       href="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="inline-block w-full h-full" // Ensure the anchor is the full size of the button
                     >
                       View CV
                     </a>

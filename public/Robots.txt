@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+
+# Specify crawl delay to prevent server overload (optional)
+Crawl-delay: 10
+
+# Link to your XML Sitemap for better crawling
+Sitemap: https://tainguyencoder.tech/sitemap.xml
