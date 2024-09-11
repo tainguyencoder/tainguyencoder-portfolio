@@ -8,7 +8,7 @@ import logo from '/assets/navbar/logo.webp';
 import menu from '/assets/navbar/menu.svg';
 import close from '/assets/navbar/close.svg';
 // compoents
-import Logo from './Logo'
+import Logo from './Logo';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -44,11 +44,10 @@ const Navbar = () => {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
+          aria-label="Go to homepage"
         >
-          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
-          <Logo
-          className="w-9 h-9"
-          />
+          <Logo className="w-9 h-9" />
+          <span className="sr-only">Home</span>
         </Link>
 
         <ul className="list-none hidden lg:flex flex-row gap-10">
