@@ -11,7 +11,7 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
   const lightRotateY = useSmoothTransform(mouseX, spring, mouseToLightRotation);
 
   return (
-    <Canvas shadows dpr={[1, 2]} resize={{ scroll: false, offsetSize: true }}>
+    <Canvas shadows dpr={[1, 0.9]} resize={{ scroll: false, offsetSize: true }}>
       <Camera mouseX={mouseX} mouseY={mouseY} />
       <MotionConfig transition={transition}>
         <motion.group
@@ -43,9 +43,9 @@ export function Lights() {
     <>
       <spotLight color="#61dafb" position={[-10, -10, -10]} intensity={0.2} />
       <spotLight color="#61dafb" position={[-10, 0, 15]} intensity={0.8} />
-      <spotLight color="#61dafb" position={[-5, 20, 2]} intensity={0.5} />
+      {/* <spotLight color="#61dafb" position={[-5, 20, 2]} intensity={0.5} /> */}
       <spotLight color="#f2056f" position={[15, 10, -2]} intensity={2} />
-      <spotLight color="#f2056f" position={[15, 10, 5]} intensity={1} />
+      {/* <spotLight color="#f2056f" position={[15, 10, 5]} intensity={1} /> */}
       <spotLight color="#b107db" position={[5, -10, 5]} intensity={0.8} />
     </>
   );
@@ -54,7 +54,7 @@ export function Lights() {
 export function Sphere() {
   return (
     <motion.mesh position={[-0.5, -0.5, 0]} variants={{ hover: { z: 2 } }}>
-      <sphereGeometry args={[0.4]} />
+      <sphereGeometry args={[0.3, 12, 12]} />
       <Material />
     </motion.mesh>
   );
@@ -163,6 +163,6 @@ function Camera({ mouseX, mouseY, ...props }) {
   );
 }
 
-const spring = { stiffness: 600, damping: 30 };
+const spring = { stiffness: 4500, damping: 30 };
 
 const mouseToLightRotation = (v) => (-1 * v) / 140;
