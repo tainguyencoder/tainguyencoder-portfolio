@@ -184,7 +184,6 @@ const Contact = () => {
               penumbra={1}
               intensity={0.3}
             />
-            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
 
             <Suspense fallback={<CanvasLoader />}>
               <group

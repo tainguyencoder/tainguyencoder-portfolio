@@ -6,7 +6,7 @@ import * as random from 'maath/random/dist/maath-random.esm';
 const Stars = (props) => {
   const ref = useRef();
   const sphere = useMemo(
-    () => random.inSphere(new Float32Array(1200), { radius: 1 }),
+    () => random.inSphere(new Float32Array(500), { radius: 1 }),
     [],
   );
 
@@ -21,7 +21,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.008} // Giảm kích thước điểm
+          size={0.006} // Giảm kích thước điểm
           sizeAttenuation={true}
           depthWrite={false}
         />
