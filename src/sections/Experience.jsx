@@ -24,7 +24,7 @@ const Experience = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setAnimationName('idle')
+      setAnimationName('idle');
       setSelectedId(null);
     };
     window.addEventListener('scroll', handleScroll);
@@ -133,7 +133,7 @@ const Experience = () => {
             </motion.div>
           ))}
         </div>
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {selectedId && (
             <motion.div
               className="fixed inset-0 flex items-center justify-center mx-10 z-50"
@@ -150,30 +150,40 @@ const Experience = () => {
               <div ref={popupRef} className="popup-content group">
                 <div className="flex flex-col justify-start items-center py-2">
                   <div className="popup-content_logo">
-                    <img className="w-12 h-12" src={items.find((item) => item.id === selectedId).icon} alt="" />
+                    <img
+                      className="w-12 h-12"
+                      src={items.find((item) => item.id === selectedId).icon}
+                      alt=""
+                    />
                   </div>
                 </div>
 
                 <div className="sm:p-5 px-2.5 py-5">
-                  <p className="font-bold text-white-100">{items.find((item) => item.id === selectedId).name}</p>
+                  <p className="font-bold text-white-100">
+                    {items.find((item) => item.id === selectedId).name}
+                  </p>
                   <p className="text-md mb-5">
-                    <span>{items.find((item) => item.id === selectedId).duration}</span>
+                    <span>
+                      {items.find((item) => item.id === selectedId).duration}
+                    </span>
                   </p>
                   <ul className="mt-5 list-disc ml-5 space-y-2">
-                    {items.find((item) => item.id === selectedId).points.map((point, index) => (
-                      <li
-                        key={`experience-point-${index}`}
-                        className="text-cyan-400 text-[11px] xs:text-[16px] sm:text-[16px] sm:font-medium pl-1 tracking-wider"
-                      >
-                        {point}
-                      </li>
-                    ))}
+                    {items
+                      .find((item) => item.id === selectedId)
+                      .points.map((point, index) => (
+                        <li
+                          key={`experience-point-${index}`}
+                          className="text-cyan-400 text-[11px] xs:text-[16px] sm:text-[16px] sm:font-medium pl-1 tracking-wider"
+                        >
+                          {point}
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </div>
             </motion.div>
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
       </div>
     </div>
   );
