@@ -1,5 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 
@@ -15,12 +16,16 @@ import Button3D from '../components/Button 3D/Button3D';
 
 const Contact = () => {
   const formRef = useRef();
+  const group = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   // Intersection Observer hook to check if the section is in view
-  const { ref: sectionRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -69,15 +74,15 @@ const Contact = () => {
   };
 
   return (
-    <div ref={sectionRef} className="relative flex lg:flex-row flex-col max-container">
+    <div className="relative flex lg:flex-row flex-col max-container">
       <div className="lg:w-1/2 flex flex-col">
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
-              <div className="flex justify-center m-12">
+              <div ref={sectionRef} className="flex justify-center m-12">
                 <h3 className={styles.sectionHeadText}>
                   {inView && (
-                    <Suspense fallback={<div>Loading Button...</div>}>
+                    <Suspense fallback={<CanvasLoader />}>
                       <Button3D
                         title="Contact"
                         link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
@@ -108,7 +113,9 @@ const Contact = () => {
                   />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">Your Email</span>
+                  <span className="text-white font-medium mb-4">
+                    Your Email
+                  </span>
                   <input
                     required
                     type="email"
@@ -123,7 +130,9 @@ const Contact = () => {
                   />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">Your Message</span>
+                  <span className="text-white font-medium mb-4">
+                    Your Message
+                  </span>
                   <input
                     name="message"
                     placeholder="Want me building stuff for you ?"
@@ -153,33 +162,41 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-        <Canvas
-          camera={{
-            position: [0, 0, 5],
-            fov: 75,
-            near: 0.1,
-            far: 1000,
-          }}
-        >
-          <directionalLight position={[0, 0, 1]} intensity={0.5} />
-          <ambientLight intensity={0.5} />
-          <pointLight position={[5, 10, 0]} intensity={0.5} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={0.3}
-          />
-          <Suspense fallback={<CanvasLoader />}>
-            <Fox
-              currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
-              rotation={[12.629, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
+      <div
+        ref={sectionRef}
+        className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"
+      >
+        {inView && (
+          <Canvas
+            camera={{
+              position: [0, 0, 5],
+              fov: 75,
+              near: 0.1,
+              far: 1000,
+            }}
+          >
+            <directionalLight position={[0, 0, 1]} intensity={0.5} />
+            <ambientLight intensity={0.5} />
+            <pointLight position={[5, 10, 0]} intensity={0.5} />
+            <spotLight
+              position={[10, 10, 10]}
+              angle={0.15}
+              penumbra={1}
+              intensity={0.3}
             />
-          </Suspense>
-        </Canvas>
+            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+
+            <Suspense fallback={<CanvasLoader />}>
+              <group
+                position={[0.5, 0.35, 0]}
+                rotation={[12.629, -0.6, 0]}
+                scale={[0.5, 0.5, 0.5]}
+              >
+                <Fox currentAnimation={currentAnimation} />
+              </group>
+            </Suspense>
+          </Canvas>
+        )}
       </div>
     </div>
   );

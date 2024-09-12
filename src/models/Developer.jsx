@@ -3,6 +3,8 @@ import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
+import gsap from 'gsap';
+
 const Developer = ({ animationName = 'idle', ...props }) => {
   const group = useRef();
 
@@ -40,6 +42,17 @@ const Developer = ({ animationName = 'idle', ...props }) => {
     actions[animationName].reset().fadeIn(0.5).play();
     return () => actions[animationName].fadeOut(0.5);
   }, [animationName]);
+
+  useEffect(() => {
+    // Ensure group.current is available before running the animation
+    if (group.current) {
+      gsap.from(group.current.rotation, {
+        y: Math.PI / 2,
+        duration: 1,
+        ease: 'power3.out',
+      });
+    }
+  }, []);
 
   return (
     <group ref={group} {...props} dispose={null}>

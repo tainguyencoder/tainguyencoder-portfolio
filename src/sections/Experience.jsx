@@ -16,6 +16,7 @@ import CanvasLoader from '../components/CanvasLoader.jsx';
 import { workExperiences } from '../constants';
 
 const Experience = () => {
+  const group = useRef();
   const [animationName, setAnimationName] = useState('idle');
   const [items, setItems] = useState(workExperiences);
   const [selectedId, setSelectedId] = useState(null);
@@ -98,9 +99,9 @@ const Experience = () => {
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                 <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-                <Suspense fallback={<CanvasLoader />}>
-                  <group position-y={-4} scale={3.3}>
-                    <Developer animationName={animationName} />
+                <Suspense>
+                  <group position-y={-4} scale={3.3} rotation={[0, -0.1, 0]}>
+                    <Developer animationName={animationName}/>
                   </group>
                 </Suspense>
               </Canvas>
