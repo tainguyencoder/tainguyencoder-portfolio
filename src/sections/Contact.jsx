@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { slideIn } from '../utils/motion';
+import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 
 // styles
@@ -18,6 +18,9 @@ const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('idle');
+
+  // Intersection Observer hook to check if the section is in view
+  const { ref: sectionRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -66,17 +69,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative flex lg:flex-row flex-col max-container">
+    <div ref={sectionRef} className="relative flex lg:flex-row flex-col max-container">
       <div className="lg:w-1/2 flex flex-col">
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
               <div className="flex justify-center m-12">
                 <h3 className={styles.sectionHeadText}>
-                  <Button3D
-                    title="Contact"
-                    link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
-                  />
+                  {inView && (
+                    <Suspense fallback={<div>Loading Button...</div>}>
+                      <Button3D
+                        title="Contact"
+                        link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
+                      />
+                    </Suspense>
+                  )}
                 </h3>
               </div>
               <form
@@ -84,6 +91,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="mt-12 flex flex-col gap-8"
               >
+                {/* Form fields */}
                 <label className="flex flex-col">
                   <span className="text-white font-medium mb-4">Your Name</span>
                   <input
@@ -100,9 +108,7 @@ const Contact = () => {
                   />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">
-                    Your email
-                  </span>
+                  <span className="text-white font-medium mb-4">Your email</span>
                   <input
                     required
                     type="email"
@@ -117,9 +123,7 @@ const Contact = () => {
                   />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">
-                    Your Message
-                  </span>
+                  <span className="text-white font-medium mb-4">Your Message</span>
                   <input
                     name="message"
                     placeholder="Want me building stuff for you ?"
