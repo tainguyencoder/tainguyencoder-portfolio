@@ -133,7 +133,7 @@ const Experience = () => {
             </motion.div>
           ))}
         </div>
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {selectedId && (
             <motion.div
               className="fixed inset-0 flex items-center justify-center mx-10 z-50"
@@ -183,7 +183,7 @@ const Experience = () => {
               </div>
             </motion.div>
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
       </div>
     </div>
   );
