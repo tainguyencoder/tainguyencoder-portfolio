@@ -72,12 +72,12 @@ const Contact = () => {
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
               <div className="flex justify-center m-12">
-                {/* <h3 className={styles.sectionHeadText}>
+                <h3 className={styles.sectionHeadText}>
                   <Button3D
                     title="Contact"
                     link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
                   />
-                </h3> */}
+                </h3>
               </div>
               <form
                 ref={formRef}
