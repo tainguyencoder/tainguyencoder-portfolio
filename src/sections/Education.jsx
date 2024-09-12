@@ -44,18 +44,9 @@ const Education = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My Schools</p>
+        <p className={`${styles.sectionSubText} `}>Academic Journey</p>
         <h2 className={`${styles.sectionHeadText}`}>Education</h2>
       </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Let's take a look
-        </motion.p>
-      </div>
 
       <div className="mt-20 flex flex-row flex-wrap justify-center gap-7">
         {schools.map((project, index) => (

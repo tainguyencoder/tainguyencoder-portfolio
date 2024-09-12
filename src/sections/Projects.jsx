@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { fadeIn, textVariant } from '../utils/motion';
+import { useInView } from 'react-intersection-observer';
 
 // styles
 import { styles } from '../styles';
@@ -40,10 +41,15 @@ const Projects = () => {
   }, [selectedProjectIndex]);
   const currentProject = projects[selectedProjectIndex];
 
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText} `}>Showcase</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
       <div className="grid xl:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full rounded-2xl">
@@ -123,24 +129,29 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        <div className="w-full green-pink-gradient p-[1px] rounded-tr-2xl rounded-tl-2xl">
+        <div
+          ref={sectionRef}
+          className="w-full green-pink-gradient p-[1px] rounded-tr-2xl rounded-tl-2xl"
+        >
           <div className="bg-tertiary xl:h-full lg:h-[650px] md:h-[550px] h-[350px] rounded-tr-2xl rounded-tl-2xl">
-            <Canvas>
-              <ambientLight intensity={Math.PI} />
-              <directionalLight position={[10, 10, 5]} />
-              <Center>
-                <Suspense fallback={<CanvasLoader />}>
-                  <group
-                    scale={2}
-                    position={[-0.2, -3, 0]}
-                    rotation={[0, -0.1, 0]}
-                  >
-                    <Computer texture={currentProject.texture} />
-                  </group>
-                </Suspense>
-              </Center>
-              <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-            </Canvas>
+            {inView && (
+              <Canvas>
+                <ambientLight intensity={Math.PI} />
+                <directionalLight position={[10, 10, 5]} />
+                <Center>
+                  <Suspense fallback={<CanvasLoader />}>
+                    <group
+                      scale={2}
+                      position={[-0.2, -3, 0]}
+                      rotation={[0, -0.1, 0]}
+                    >
+                      <Computer texture={currentProject.texture} />
+                    </group>
+                  </Suspense>
+                </Center>
+                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+              </Canvas>
+            )}
           </div>
         </div>
       </div>

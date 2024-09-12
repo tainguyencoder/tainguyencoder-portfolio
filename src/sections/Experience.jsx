@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import { textVariant } from '../utils/motion';
+import { useInView } from 'react-intersection-observer';
 
 // styles
 import { styles } from '../styles';
@@ -62,11 +63,16 @@ const Experience = () => {
     exit: { opacity: 0, scale: 0.5, borderRadius: '50%' },
   };
 
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <div className="w-full text-white-600">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done
+          Career Milestones
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Work Experience
@@ -74,26 +80,31 @@ const Experience = () => {
       </motion.div>
 
       <div className="work-container">
-        <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
+        <div
+          ref={sectionRef}
+          className="w-full green-pink-gradient p-[1px] rounded-2xl"
+        >
           <div className="bg-tertiary rounded-2xl xl:h-full lg:h-full md:h-[550px] h-[350px]">
-            <Canvas
-              camera={{
-                position: [0, 3, 5],
-                fov: 75,
-                near: 0.1,
-                far: 1000,
-              }}
-            >
-              <ambientLight intensity={1} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <directionalLight position={[10, 10, 10]} intensity={0.5} />
-              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-              <Suspense fallback={<CanvasLoader />}>
-                <group position-y={-4} scale={3.3}>
-                  <Developer animationName={animationName} />
-                </group>
-              </Suspense>
-            </Canvas>
+            {inView && (
+              <Canvas
+                camera={{
+                  position: [0, 3, 5],
+                  fov: 75,
+                  near: 0.1,
+                  far: 1000,
+                }}
+              >
+                <ambientLight intensity={1} />
+                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                <directionalLight position={[10, 10, 10]} intensity={0.5} />
+                <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+                <Suspense fallback={<CanvasLoader />}>
+                  <group position-y={-4} scale={3.3}>
+                    <Developer animationName={animationName} />
+                  </group>
+                </Suspense>
+              </Canvas>
+            )}
           </div>
         </div>
         {/* content */}

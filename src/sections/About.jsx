@@ -1,6 +1,7 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
@@ -9,9 +10,9 @@ import { styles } from '../styles';
 // motion
 import { fadeIn, textVariant } from '../utils/motion';
 // components
-import BallCanvas from '../components/canvas/Ball'
+import BallCanvas from '../components/canvas/Ball';
 // data
-import { services, technologies } from "../constants";
+import { services, technologies } from '../constants';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
@@ -32,15 +33,18 @@ const ServiceCard = ({ index, title, icon }) => (
           className="w-80 h-30 object-contain"
         />
 
-        <p className="text-white text-[20px] font-bold text-center">
-          {title}
-        </p>
+        <p className="text-white text-[20px] font-bold text-center">{title}</p>
       </div>
     </motion.div>
   </Tilt>
 );
 
 const About = () => {
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <>
       <div
@@ -48,20 +52,17 @@ const About = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%" />
-          <div className="w-1 sm:h-80 h-40 rainbow-gradient" />
+          <div className="w-1 sm:h-40 h-20 rainbow-gradient" />
         </div>
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm
-            <br/>
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
               Tai Nguyen
             </span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a Front-end developer <br />
-            Welcome to My Portfolio
+            whats up tho
           </p>
         </div>
       </div>
@@ -71,12 +72,14 @@ const About = () => {
           <ServiceCard key={service.icon} index={index} {...service} />
         ))}
       </div>
-      <div className="mt-20 flex flex-row flex-wrap justify-center gap-2">
-      {technologies.map((technology) => (
-        <div className='w-18 h-18' key={technology.name}>
-          <BallCanvas icon={technology.icon} />
-        </div>
-      ))}
+      <div
+        className="mt-20 flex flex-row flex-wrap justify-center gap-2"
+      >
+        {technologies.map((technology) => (
+          <div className="w-18 h-18" key={technology.name} ref={sectionRef}>
+            {inView && <BallCanvas icon={technology.icon} />}
+          </div>
+        ))}
       </div>
     </>
   );
