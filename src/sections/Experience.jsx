@@ -101,8 +101,8 @@ const Experience = () => {
           {items.map((item) => (
             <motion.div
               key={item.id}
-              layoutId={item.id} // Assign a unique layout ID for animation
-              onClick={() => setSelectedId(item.id)} // Open the card on click
+              layoutId={item.id}
+              onClick={() => setSelectedId(item.id)}
             >
               <div
                 onClick={() => setAnimationName(item.animation.toLowerCase())}
@@ -133,7 +133,7 @@ const Experience = () => {
             </motion.div>
           ))}
         </div>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {selectedId && (
             <motion.div
               className="fixed inset-0 flex items-center justify-center mx-10 z-50"
@@ -173,7 +173,7 @@ const Experience = () => {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </div>
   );

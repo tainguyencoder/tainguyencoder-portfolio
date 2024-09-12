@@ -71,18 +71,14 @@ const Contact = () => {
         <div className="w-full green-pink-gradient p-[1px] rounded-2xl">
           <div className="bg-tertiary rounded-2xl">
             <div className="bg-black-100 p-10 rounded-2xl flex flex-col">
-              {/* <p className={styles.sectionSubText}>Get in touch</p> */}
               <div className="flex justify-center m-12">
-                <h3 className={styles.sectionHeadText}>
-                <Button3D
+                {/* <h3 className={styles.sectionHeadText}>
+                  <Button3D
                     title="Contact"
                     link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
                   />
-                </h3>
+                </h3> */}
               </div>
-              {/* <p className={styles.rainbow_gradient}>
-                tainguyencoder@gmail.com
-              </p> */}
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
