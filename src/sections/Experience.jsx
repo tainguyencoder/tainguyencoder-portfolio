@@ -101,7 +101,7 @@ const Experience = () => {
                 <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
                 <Suspense fallback={<CanvasLoader />}>
                   <group position-y={-4} scale={3.3} rotation={[0, -0.1, 0]}>
-                    <Developer animationName={animationName}/>
+                    <Developer animationName={animationName} />
                   </group>
                 </Suspense>
               </Canvas>

@@ -8,19 +8,19 @@ import gsap from 'gsap';
 const Developer = ({ animationName = 'idle', ...props }) => {
   const group = useRef();
 
-  const { scene } = useGLTF('/models/animations/developer.glb');
+  const { scene } = useGLTF('/models/experience/developer.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
+  const { animations: idleAnimation } = useFBX('/models/experience/animations/idle.fbx');
   const { animations: saluteAnimation } = useFBX(
-    '/models/animations/salute.fbx',
+    '/models/experience/animations/salute.fbx',
   );
   const { animations: clappingAnimation } = useFBX(
-    '/models/animations/clapping.fbx',
+    '/models/experience/animations/clapping.fbx',
   );
   const { animations: victoryAnimation } = useFBX(
-    '/models/animations/victory.fbx',
+    '/models/experience/animations/victory.fbx',
   );
 
   idleAnimation[0].name = 'idle';
@@ -123,5 +123,5 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   );
 };
 
-useGLTF.preload('/models/animations/developer.glb');
+useGLTF.preload('/models/experience/developer.glb');
 export default Developer;

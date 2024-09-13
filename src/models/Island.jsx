@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 // 3D file
-import isLandScene from '/models/island.glb';
+import isLandScene from '/models/hero/island.glb';
 
 const Island = (props) => {
   const group = useRef();

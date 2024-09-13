@@ -3,7 +3,7 @@ import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import scene from '/models/computer.glb'
+import scene from '/models/projects/computer.glb'
 const Computer = (props) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(scene);
