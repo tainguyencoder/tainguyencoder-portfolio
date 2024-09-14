@@ -89,7 +89,7 @@ const Experience = () => {
             {inView && (
               <Canvas
                 camera={{
-                  position: [0, 3, 5],
+                  position: [3.5, 3, 8],
                   fov: 75,
                   near: 0.1,
                   far: 1000,
@@ -100,7 +100,7 @@ const Experience = () => {
                 <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
                 <Suspense fallback={<CanvasLoader />}>
-                  <group position-y={-3} scale={3.3} rotation={[0, 0, 0]}>
+                  <group position-y={-3.5} scale={3.8}>
                     <Developer animationName={animationName} />
                   </group>
                 </Suspense>

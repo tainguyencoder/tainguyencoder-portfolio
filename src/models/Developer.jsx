@@ -12,34 +12,31 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX('/models/experience/animations/Idle.fbx');
-  const { animations: saluteAnimation } = useFBX(
-    '/models/experience/animations/Salute.fbx',
-  );
-  const { animations: shootingAnimation } = useFBX(
-    '/models/experience/animations/Shooting Arrow.fbx',
-  );
-  const { animations: danceAnimation } = useFBX(
-    '/models/experience/animations/Breakdance Footwork 2.fbx',
+  const { animations: idleAnimation } = useFBX(
+    '/models/experience/animations/Idle.fbx',
   );
   const { animations: bboyAnimation } = useFBX(
     '/models/experience/animations/Bboy Uprock.fbx',
   );
+  const { animations: danceAnimation } = useFBX(
+    '/models/experience/animations/Breakdance Freeze Var 2.fbx',
+
+  );
+  const { animations: flairAnimation } = useFBX(
+    '/models/experience/animations/Flair.fbx',
+  );
 
   idleAnimation[0].name = 'idle';
-  saluteAnimation[0].name = 'salute';
-  shootingAnimation[0].name = 'shooting';
-  danceAnimation[0].name = 'dance';
   bboyAnimation[0].name = 'bboy';
-
+  danceAnimation[0].name = 'dance';
+  flairAnimation[0].name = 'flair';
 
   const { actions } = useAnimations(
     [
       idleAnimation[0],
-      saluteAnimation[0],
-      shootingAnimation[0],
-      danceAnimation[0],
       bboyAnimation[0],
+      flairAnimation[0],
+      danceAnimation[0],
     ],
     group,
   );
