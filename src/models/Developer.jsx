@@ -5,38 +5,37 @@ import { SkeletonUtils } from 'three-stdlib';
 
 import gsap from 'gsap';
 
-const Developer = ({ animationName = 'idle', ...props }) => {
+const Developer = ({ animationName = 'bboy', ...props }) => {
   const group = useRef();
 
   const { scene } = useGLTF('/models/experience/developer.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX(
-    '/models/experience/animations/Idle.fbx',
-  );
   const { animations: bboyAnimation } = useFBX(
     '/models/experience/animations/Bboy Uprock.fbx',
   );
-  const { animations: danceAnimation } = useFBX(
+  const { animations: breakdanceFAnimation } = useFBX(
     '/models/experience/animations/Breakdance Freeze Var 2.fbx',
-
+  );
+  const { animations: breakdance19Animation } = useFBX(
+    '/models/experience/animations/Breakdance 1990.fbx',
   );
   const { animations: flairAnimation } = useFBX(
     '/models/experience/animations/Flair.fbx',
   );
 
-  idleAnimation[0].name = 'idle';
   bboyAnimation[0].name = 'bboy';
-  danceAnimation[0].name = 'dance';
+  breakdanceFAnimation[0].name = 'breakdancef';
   flairAnimation[0].name = 'flair';
+  breakdance19Animation[0].name = 'breakdance19';
 
   const { actions } = useAnimations(
     [
-      idleAnimation[0],
       bboyAnimation[0],
+      breakdanceFAnimation[0],
       flairAnimation[0],
-      danceAnimation[0],
+      breakdance19Animation[0],
     ],
     group,
   );

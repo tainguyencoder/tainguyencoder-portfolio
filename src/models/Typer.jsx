@@ -12,7 +12,7 @@ export function Typer({ animation, ...props }) {
   );
 
   const { animations: typingAnimation } = useFBX(
-    '/models/contact/animations/typing.fbx',
+    '/models/contact/animations/Typing.fbx',
   );
 
   const { animations: kissAnimation } = useFBX(

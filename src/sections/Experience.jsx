@@ -17,7 +17,7 @@ import { workExperiences } from '../constants';
 
 const Experience = () => {
   const group = useRef();
-  const [animationName, setAnimationName] = useState('idle');
+  const [animationName, setAnimationName] = useState('bboy');
   const [items, setItems] = useState(workExperiences);
   const [selectedId, setSelectedId] = useState(null);
   const popupRef = useRef();
@@ -26,7 +26,7 @@ const Experience = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setAnimationName('idle');
+      setAnimationName('bboy');
       setSelectedId(null);
     };
     window.addEventListener('scroll', handleScroll);
@@ -38,7 +38,7 @@ const Experience = () => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        setAnimationName('idle');
+        setAnimationName('bboy');
         handleClosePopup();
       }
     };
@@ -121,7 +121,7 @@ const Experience = () => {
                 onPointerOver={() =>
                   setAnimationName(item.animation.toLowerCase())
                 }
-                onPointerOut={() => setAnimationName('idle')}
+                onPointerOut={() => setAnimationName('bboy')}
                 className="work-content_container group"
               >
                 <div className="flex flex-col h-full justify-start items-center py-2">
