@@ -24,7 +24,7 @@ const Contact = () => {
   const group = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
-  const [animation, setAnimation] = useState('falling');
+  const [animation, setAnimation] = useState('gangnam');
 
   // Intersection Observer hook to check if the section is in view
   const { ref: sectionRef, inView } = useInView({
@@ -32,28 +32,18 @@ const Contact = () => {
     threshold: 0,
   });
 
-  useEffect(() => {
-    if (inView) {
-      // Chỉ khi phần tử inView mới bắt đầu thay đổi animation
-      const timer = setTimeout(() => {
-        setAnimation('standing');
-      }, 2500); // 1.5 giây
-
-      return () => clearTimeout(timer); // Xóa timer nếu component bị unmount
-    }
-  }, [inView]);
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
   const handleFocus = () => setAnimation('typing');
-  const handleBlur = () => setAnimation('standing');
+  const handleBlur = () => setAnimation('gangnam');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setAnimation('falling');
+    setAnimation('kiss');
 
     try {
       await emailjs.send(
@@ -69,7 +59,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
       setLoading(false);
-      setAnimation('standing');
+      setAnimation('gangnam');
       alert('Thank you. I will get back to you as soon as possible.');
       setForm({
         name: '',
@@ -80,7 +70,7 @@ const Contact = () => {
       setLoading(false);
       console.error(error);
       alert('Ahh, something went wrong. Please try again.');
-      setAnimation('standing');
+      setAnimation('gangnam');
       setForm({
         name: '',
         email: '',

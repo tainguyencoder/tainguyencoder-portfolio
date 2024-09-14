@@ -7,22 +7,24 @@ export function Typer({ animation, ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF('models/contact/typer.glb');
 
-  const { animations: standingAnimation } = useFBX(
-    'models/contact/animations/standing.fbx',
+  const { animations: gangnamAnimation } = useFBX(
+    '/models/contact/animations/Gangnam Style.fbx',
   );
-  const { animations: fallingAnimation } = useFBX(
-    '/models/contact/animations/falling.fbx',
-  );
+
   const { animations: typingAnimation } = useFBX(
     '/models/contact/animations/typing.fbx',
   );
 
-  standingAnimation[0].name = 'standing';
-  fallingAnimation[0].name = 'falling';
+  const { animations: kissAnimation } = useFBX(
+    'models/contact/animations/Blow A Kiss.fbx',
+  );
+
+  gangnamAnimation[0].name = 'gangnam';
   typingAnimation[0].name = 'typing';
+  kissAnimation[0].name = 'kiss';
 
   const { actions } = useAnimations(
-    [standingAnimation[0], fallingAnimation[0], typingAnimation[0]],
+    [gangnamAnimation[0], typingAnimation[0], kissAnimation[0]],
     group,
   );
 
