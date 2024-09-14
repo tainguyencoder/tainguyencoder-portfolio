@@ -21,12 +21,10 @@ import Button3D from '../components/Button 3D/Button3D';
 
 const Contact = () => {
   const formRef = useRef();
-  const group = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [animation, setAnimation] = useState('gangnam');
 
-  // Intersection Observer hook to check if the section is in view
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0,
@@ -188,9 +186,11 @@ const Contact = () => {
                 intensity={0.3}
               />
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={[2.8, 2.8, 2.8]} position={[0, -2.3, 0]}>
-                  <Taikool animation={animation} />
-                </group>
+                <Taikool
+                  animation={animation}
+                  scale={[2.8, 2.8, 2.8]}
+                  position={[0, -2.3, 0]}
+                />
               </Suspense>
             </Canvas>
           </div>

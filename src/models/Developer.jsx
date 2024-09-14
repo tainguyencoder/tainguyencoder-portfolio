@@ -5,7 +5,7 @@ import { SkeletonUtils } from 'three-stdlib';
 
 import gsap from 'gsap';
 
-const Developer = ({ animationName = 'bboy', ...props }) => {
+const Developer = ({ animation, ...props }) => {
   const group = useRef();
 
   const { scene } = useGLTF('/models/experience/developer.glb');
@@ -40,10 +40,19 @@ const Developer = ({ animationName = 'bboy', ...props }) => {
     group,
   );
 
+  // This effect will run whenever the currentAnimation prop changes
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.5).play();
-    return () => actions[animationName].fadeOut(0.5);
-  }, [animationName]);
+    Object.values(actions).forEach((action) => action.stop());
+
+    if (actions[animation]) {
+      actions[animation].play();
+    }
+  }, [actions, animation]);
+
+  // useEffect(() => {
+  //   actions[animation].reset().fadeIn(0.5).play();
+  //   return () => actions[animation].fadeOut(0.5);
+  // }, [animation]);
 
   useEffect(() => {
     if (group.current) {

@@ -28,9 +28,12 @@ const Taikool = ({ animation, ...props }) => {
   );
 
   useEffect(() => {
-    actions[animation].reset().fadeIn(0.5).play();
-    return () => actions[animation].reset().fadeOut(0.5);
-  }, [animation]);
+    Object.values(actions).forEach((action) => action.stop());
+
+    if (actions[animation]) {
+      actions[animation].play();
+    }
+  }, [actions, animation]);
 
   return (
     <group ref={group} {...props} dispose={null}>

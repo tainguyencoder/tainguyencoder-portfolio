@@ -16,7 +16,7 @@ import CanvasLoader from '../components/CanvasLoader.jsx';
 import { experiences } from '../constants';
 
 const Experience = () => {
-  const [animationName, setAnimationName] = useState('bboy');
+  const [animation, setAnimation] = useState('bboy');
   const popupRef = useRef();
 
   const { ref: sectionRef, inView } = useInView({
@@ -57,7 +57,7 @@ const Experience = () => {
                 <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
                 <Suspense fallback={<CanvasLoader />}>
                   <group position-y={-3.5} scale={3.8}>
-                    <Developer animationName={animationName} />
+                    <Developer animation={animation} />
                   </group>
                 </Suspense>
               </Canvas>
@@ -71,9 +71,9 @@ const Experience = () => {
             <div
               key={item.id}
               onPointerOver={() =>
-                setAnimationName(item.animation.toLowerCase())
+                setAnimation(item.animation.toLowerCase())
               }
-              onPointerOut={() => setAnimationName('bboy')}
+              onPointerOut={() => setAnimation('bboy')}
               className="work-content_container group"
             >
               <div className="flex flex-col h-full justify-start items-center py-2">
