@@ -276,7 +276,7 @@ export const workExperiences = [
       'Expert in crafting dynamic and responsive landing pages, optimizing web performance, and ensuring seamless user experiences. Click to read more...',
 
     icon: '/assets/experience/freelancer.webp',
-    animation: 'victory',
+    animation: 'dance',
     points: [
       'Develop landing pages using React and Tailwind CSS.',
       'Optimize web performance and load times.',
@@ -291,7 +291,7 @@ export const workExperiences = [
     pos: 'Front-end Web Developer',
     duration: 'Sep 2022 - July 2024',
     icon: '/assets/experience/okkami.webp',
-    animation: 'clapping',
+    animation: 'bboy',
     title:
       'Specializing in robust web development, I handle everything from codebase setup and UI/UX design to testing and deployment. Click to read more ...',
     points: [
@@ -311,7 +311,7 @@ export const workExperiences = [
     title:
       'With expertise in web development, I create dynamic applications featuring advanced search, interactive dashboards, and responsive designs. Click to read more ...',
     icon: '/assets/experience/facilitybot.webp',
-    animation: 'salute',
+    animation: 'shooting',
     points: [
       'Implement the search function by drawing an area on the map',
       'Create CRUD pages with table that con sort, filter. Also forms and handle validation',

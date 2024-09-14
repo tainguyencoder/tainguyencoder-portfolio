@@ -12,28 +12,34 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX('/models/experience/animations/idle.fbx');
+  const { animations: idleAnimation } = useFBX('/models/experience/animations/Idle.fbx');
   const { animations: saluteAnimation } = useFBX(
-    '/models/experience/animations/salute.fbx',
+    '/models/experience/animations/Salute.fbx',
   );
-  const { animations: clappingAnimation } = useFBX(
-    '/models/experience/animations/clapping.fbx',
+  const { animations: shootingAnimation } = useFBX(
+    '/models/experience/animations/Shooting Arrow.fbx',
   );
-  const { animations: victoryAnimation } = useFBX(
-    '/models/experience/animations/victory.fbx',
+  const { animations: danceAnimation } = useFBX(
+    '/models/experience/animations/Breakdance Footwork 2.fbx',
+  );
+  const { animations: bboyAnimation } = useFBX(
+    '/models/experience/animations/Bboy Uprock.fbx',
   );
 
   idleAnimation[0].name = 'idle';
   saluteAnimation[0].name = 'salute';
-  clappingAnimation[0].name = 'clapping';
-  victoryAnimation[0].name = 'victory';
+  shootingAnimation[0].name = 'shooting';
+  danceAnimation[0].name = 'dance';
+  bboyAnimation[0].name = 'bboy';
+
 
   const { actions } = useAnimations(
     [
       idleAnimation[0],
       saluteAnimation[0],
-      clappingAnimation[0],
-      victoryAnimation[0],
+      shootingAnimation[0],
+      danceAnimation[0],
+      bboyAnimation[0],
     ],
     group,
   );
@@ -44,7 +50,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   }, [animationName]);
 
   useEffect(() => {
-    // Ensure group.current is available before running the animation
     if (group.current) {
       gsap.from(group.current.rotation, {
         y: Math.PI / 2,
