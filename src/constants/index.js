@@ -235,54 +235,16 @@ const projects = [
 
 const experiences = [
   {
-    title: 'Front-end Web Developer',
-    company_name: 'Facilitybot (Product of Robust Tech House)',
-    icon: '/assets/experience/facilitybot.webp',
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Aug 2022',
-    points: [
-      'Implement the search function by drawing an area on the map',
-      'Create CRUD pages with table that con sort, filter. Also forms and handle validation',
-      'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features',
-      'Handle responsive column',
-      'Use ChartJS to make a graph that show the statistics',
-      'Create custom dashboard that help users can pin, arrange tables and statistical graphs',
-    ],
-  },
-  {
-    title: 'Front-end Web Developer',
-    company_name: 'Okkami (Outsourcing project of Robust Tech House)',
-    icon: '/assets/experience/okkami.webp',
-    iconBg: '#383E56',
-    date: 'Sep 2022 - Present',
-    points: [
-      'Build the code base',
-      'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub',
-      'Code the UI/UX following the mobile app',
-      'Handle responsive',
-      'Write unit test and integration test using Jest & React Testing Library',
-      'Deploy to Vercel for QA/QC from Okkami to test',
-    ],
-  },
-];
-
-export const workExperiences = [
-  {
     id: 1,
     name: 'Freelancer',
     pos: 'Front-End Web Developer',
     duration: 'Aug 2024 - Present',
-    title:
-      'Expert in crafting dynamic and responsive landing pages, optimizing web performance, and ensuring seamless user experiences. Click to read more...',
-
     icon: '/assets/experience/freelancer.webp',
     animation: 'breakdance19',
     points: [
       'Develop landing pages using React and Tailwind CSS.',
-      'Optimize web performance and load times.',
-      'Create interactive UI elements like sliders and modals.',
-      'Ensure responsive design and cross-browser compatibility.',
-      'Implement basic SEO and provide ongoing maintenance.',
+      'Optimize web performance and create interactive UI elements.',
+      'Ensure responsive design, compatibility, and SEO.',
     ],
   },
   {
@@ -292,15 +254,10 @@ export const workExperiences = [
     duration: 'Sep 2022 - July 2024',
     icon: '/assets/experience/okkami.webp',
     animation: 'flair',
-    title:
-      'Specializing in robust web development, I handle everything from codebase setup and UI/UX design to testing and deployment. Click to read more ...',
     points: [
-      'Build the code base',
-      'Configure Linters in code base, CICD using Github Actions and Dockerfile for DockerHub',
-      'Code the UI/UX following the mobile app',
-      'Handle responsive',
-      'Write unit test and integration test using Jest & React Testing Library',
-      'Deploy to Vercel for QA/QC from Okkami to test',
+      'Set up code base, Linters, CICD with GitHub Actions & DockerHub.',
+      'Develop responsive UI/UX for the mobile app.',
+      'Write tests and deploy to Vercel for QA/QC.',
     ],
   },
   {
@@ -308,17 +265,12 @@ export const workExperiences = [
     name: 'Facilitybot',
     pos: 'Front-end Web Developer',
     duration: 'Jan 2022 - Aug 2022',
-    title:
-      'With expertise in web development, I create dynamic applications featuring advanced search, interactive dashboards, and responsive designs. Click to read more ...',
     icon: '/assets/experience/facilitybot.webp',
     animation: 'breakdancef',
     points: [
-      'Implement the search function by drawing an area on the map',
-      'Create CRUD pages with table that con sort, filter. Also forms and handle validation',
-      'Implement drag and drop feature that can nest infinite levels, sort, filter, search for each row and have CRUD features',
-      'Handle responsive column',
-      'Use ChartJS to make a graph that show the statistics',
-      'Create custom dashboard that help users can pin, arrange tables and statistical graphs',
+      'Map search and CRUD with sortable tables.',
+      'Drag-and-drop with nesting and row CRUD.',
+      'Dashboard with ChartJS and customizable layout.',
     ],
   },
 ];
