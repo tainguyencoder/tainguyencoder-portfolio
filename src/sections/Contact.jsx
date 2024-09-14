@@ -14,7 +14,7 @@ import { styles } from '../styles';
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
 // 3D model
-import Avatar from '../models/Typer';
+import Taikool from '../models/Taikool';
 // components
 import CanvasLoader from '../components/CanvasLoader';
 import Button3D from '../components/Button 3D/Button3D';
@@ -31,7 +31,6 @@ const Contact = () => {
     triggerOnce: true,
     threshold: 0,
   });
-
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -190,7 +189,7 @@ const Contact = () => {
               />
               <Suspense fallback={<CanvasLoader />}>
                 <group scale={[2.8, 2.8, 2.8]} position={[0, -2.3, 0]}>
-                  <Avatar animation={animation} />
+                  <Taikool animation={animation} />
                 </group>
               </Suspense>
             </Canvas>
