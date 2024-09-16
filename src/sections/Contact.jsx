@@ -6,6 +6,8 @@ import {
   OrbitControls,
   Sky,
 } from '@react-three/drei';
+import { motion } from 'framer-motion';
+import { textVariant } from '../utils/motion';
 import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 
@@ -78,6 +80,14 @@ const Contact = () => {
 
   return (
     <div ref={sectionRef}>
+      <motion.div variants={textVariant()} className="mb-10">
+        <p className={`${styles.sectionSubText} text-center`}>
+          Get in touch
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          Contact
+        </h2>
+      </motion.div>
       {inView && (
         <div className="relative flex lg:flex-row flex-col max-container">
           <div className="lg:w-1/2 flex flex-col">
@@ -88,7 +98,7 @@ const Contact = () => {
                     <h3 className={styles.sectionHeadText}>
                       <Suspense fallback={<CanvasLoader />}>
                         <Button3D
-                          title="Contact"
+                          title="View CV"
                           link="/assets/cv/CV-NGUYEN-THANH-TAI-FE-Developer.pdf"
                         />
                       </Suspense>

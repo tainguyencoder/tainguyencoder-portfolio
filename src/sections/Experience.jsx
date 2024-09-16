@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { textVariant } from '../utils/motion';
 import { useInView } from 'react-intersection-observer';
 
