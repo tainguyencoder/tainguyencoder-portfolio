@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef } from 'react';
+import React, { Suspense, useState, useRef, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -9,8 +9,11 @@ import { useInView } from 'react-intersection-observer';
 import { styles } from '../styles';
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
+// 3D model
+// import Developer from '../models/Developer';
+const Developer = lazy(() => import('../models/Developer'));
+
 // components
-import Developer from '../models/Developer';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 // data
 import { experiences } from '../constants';

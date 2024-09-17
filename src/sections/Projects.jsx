@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Suspense, useState } from 'react';
@@ -14,9 +14,12 @@ import { styles } from '../styles';
 import SectionWrapper from '../hoc/SectionWrapper';
 // data
 import { projects } from '../constants/index.js';
+// 3D model
+// import Computer from '../models/Computer';
+const Computer = lazy(() => import('../models/Computer'));
+
 // components
 import CanvasLoader from '../components/CanvasLoader.jsx';
-import Computer from '../models/Computer';
 
 const projectCount = projects.length;
 

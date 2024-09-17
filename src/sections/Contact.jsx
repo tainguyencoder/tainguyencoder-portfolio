@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState, useEffect } from 'react';
+import React, { Suspense, useRef, useState, useEffect, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import {
   ContactShadows,
@@ -16,7 +16,8 @@ import { styles } from '../styles';
 // wrapper
 import SectionWrapper from '../hoc/SectionWrapper';
 // 3D model
-import Taikool from '../models/Taikool';
+// import Taikool from '../models/Taikool';
+const Taikool = lazy(() => import('../models/Taikool'));
 // components
 import CanvasLoader from '../components/CanvasLoader';
 import Button3D from '../components/Button 3D/Button3D';

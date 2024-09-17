@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -9,8 +9,11 @@ import SectionWrapper from '../hoc/SectionWrapper';
 import { styles } from '../styles';
 // motion
 import { fadeIn, textVariant } from '../utils/motion';
+// 3D model
+// import BallCanvas from '../components/canvas/Ball';
+const BallCanvas = lazy(() => import('../components/canvas/Ball'));
 // components
-import BallCanvas from '../components/canvas/Ball';
+import CanvasLoader from '../components/CanvasLoader';
 // data
 import { services, technologies } from '../constants';
 
@@ -72,12 +75,14 @@ const About = () => {
           <ServiceCard key={service.icon} index={index} {...service} />
         ))}
       </div>
-      <div
-        className="mt-20 flex flex-row flex-wrap justify-center gap-2"
-      >
+      <div className="mt-20 flex flex-row flex-wrap justify-center gap-2">
         {technologies.map((technology) => (
           <div className="w-18 h-18" key={technology.name} ref={sectionRef}>
-            {inView && <BallCanvas icon={technology.icon} />}
+            {inView && (
+              <Suspense fallback={<div>Loading...</div>}>
+                <BallCanvas icon={technology.icon} />
+              </Suspense>
+            )}
           </div>
         ))}
       </div>
