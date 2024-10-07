@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
 
 // sections
 import Navbar from './components/Navbar';
@@ -10,14 +9,8 @@ import Education from './sections/Education';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
 import Contact from './sections/Contact';
-import Stars from './components/canvas/Stars';
 
 const App = () => {
-  const { ref: sectionRef, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -25,21 +18,13 @@ const App = () => {
 
         <Hero />
 
-        <div ref={sectionRef} className="relative z-0">
-          <About />
-          {/* <Stars /> */}
-          {inView && <Stars />}
-        </div>
+        <About />
 
         <Education />
 
-        <div className="relative z-10">
-          <Experience />
-        </div>
+        <Experience />
 
-        <div className="relative z-0">
-          <Projects />
-        </div>
+        <Projects />
 
         <Contact />
 
